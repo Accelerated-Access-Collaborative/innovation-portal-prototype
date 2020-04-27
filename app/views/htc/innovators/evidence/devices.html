@@ -32,12 +32,17 @@
       {{ contentsList({
         items: [
           {
+            href: "/htc/innovators/evidence",
+            text: "Evidence overview"
+          },
+          {
             href: "/htc/innovators/evidence/medicines",
             text: "Medicines"
           },          
           {
             href: "/htc/innovators/evidence/devices",
-            text: "Medical devices"
+            text: "Medical devices",
+            current: "true"
           },
           {
             href: "/htc/innovators/evidence/diagnostics",
@@ -54,19 +59,40 @@
         ]
       }) }}
 
-      <p>For a product or service (including medicinal products, medical devices, diagnostic tests, digital health technologies, non-clinical services, models of care, surgical procedures) to be adopted within the NHS, innovators must provide evidence to support their value proposition. </p>
+      <h2>Medical devices</h2>
 
-<h2 id="efficacy-and-safety">Efficacy and Safety</h2>
-<p>To satisfy regulatory requirements in the UK, innovators must provide evidence of efficacy and safety of their product through any relevant framework. More information about the regulations that apply to different types of innovation can be found in the Regulations section.</p>
-<h2 id="comparative-clinical-effectiveness">Comparative clinical effectiveness versus standard of care in the NHS</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups, require an understanding of interventions in the context of alternative care (comparative effectiveness). The evaluation of comparative effectiveness requires quantification of the effect of the technology being assessed and of the relevant comparator technologies representing standard of care in the NHS.</p>
-<p>NICE’s different evaluation programmes have different evidence requirements for showing clinical and cost-effectiveness.  Evidence can include anything from systematic reviews and meta-analyses to case studies. Furthermore, NICE has published a statement of intent on the Use of Broader Data in Guidance Development. The robustness of the evidence provided will be considered by the relevant decision-makers.</p>
+<h3>Clinical effectiveness</h3>
+<p>Innovators will need to provide published and/or unpublished evidence (including experimental and observational studies) demonstrating efficacy, effectiveness, usability and safety outcomes.  These data may include real world evidence from studies in clinical settings, ideally in the NHS or of relevance to NHS care pathways. Evidence submitted to regulators (MHRA, FDA) could form a part of this submission.</p>
 
-<p>Further information on what type of evidence is needed to support your value proposition can be sought from NICE Scientific Advice.</p>
-<h2 id="economic-case">Economic case demonstrating value for money</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups have to make decisions with a focus on maximising health gains in the context of a fixed NHS budget. Therefore, an economic evaluation is needed to assess the economic impact of adopting healthcare interventions (that is, to compare the costs and benefits of a healthcare intervention to assess its value for money for the NHS).</p>
+<p>It is important that evidence supports the claimed benefits of the technology and relevant outcomes, such as measuring resource use where staff or setting is important. For example, studies showing a device can allow treatments to be undertaken in primary care and saves clinical staff time. Relevant, clinically important outcomes are important over and above evidence showing functionality of the technology, such as demonstrating complete wound closure in wound care technologies.</p>
 
+<p>Evidence of comparative effectiveness may come from head-to-head randomised or non-randomised clinical trials, indirect, before-after and other studies showing benefits over treatments routinely used in the NHS. The appropriate type of evidence would depend on the class of the medical device.</p>
 
+<h3>Economic evidence</h3>
+<p>The preferred type of economic analysis for most medical devices is a cost-consequence analysis (CCA). However, for medical devices that incur additional cost over and above standard NHS care, a cost-utility and budget impact analysis will be required, similar to those used for medicinal products.</p>
+
+<p>CCA considers the costs and resource consequences resulting from, or associated with, the use of the technology under evaluation and comparator technologies, as well as considering relevant clinical benefits (for example, effectiveness outcomes) alongside the cost analysis.</p>
+
+<p>Information needed for a CCA include cost and resource use data as well as data on clinical outcomes.</p>
+<h3>An illustrative example</h3> 
+<p>HeartFlow FFRCT for estimating fractional flow reserve from coronary CT angiography
+A CCA was developed for the NICE assessment of HeartFlow FFRCT for estimating fractional flow reserve from coronary CT angiography (See the assessment report for detailed information).</p>
+
+<p>Note: This is an illustrative example provided only as a guide to demonstrate what a CCA looks like and the types of inputs and outputs. It should be read in conjunction with the committee’s consideration of the evidence, and innovators should be mindful that the structure and inputs will not be equally applicable to all products. The appropriate approach for your product will depend on your evidence and value proposition.</p>
+
+<h3>Where to go for more information</h3>
+<p>The medical technologies evaluation programme methods guide provides more information on the evidence requirements (including detailed information on providing a CCA) for evaluating medical devices.</p>
+
+<p>Bespoke support for developing your clinical and economic evidence case is available through <a href="https://www.nice.org.uk/about/what-we-do/life-sciences/scientific-advice">NICE Scientific Advice</a>.</p>
+
+{% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+  "previousUrl": "/htc/innovators/medicines",
+  "previousPage": "Medicines",
+  "nextUrl": "/htc/innovators/evidence/diagnostics",
+  "nextPage": "Diagnostics tests"
+}) }}
  
     </div>  
 

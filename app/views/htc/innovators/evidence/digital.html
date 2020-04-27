@@ -32,6 +32,10 @@
       {{ contentsList({
         items: [
           {
+            href: "/htc/innovators/evidence",
+            text: "Evidence overview"
+          },
+          {
             href: "/htc/innovators/evidence/medicines",
             text: "Medicines"
           },          
@@ -45,7 +49,8 @@
           },
           {
             href: "/htc/innovators/evidence/digital",
-            text: "Digital health technologies"
+            text: "Digital health technologies",
+            current: "true"
           },
           {
             href: "/htc/innovators/evidence/other",
@@ -54,19 +59,26 @@
         ]
       }) }}
 
-      <p>For a product or service (including medicinal products, medical devices, diagnostic tests, digital health technologies, non-clinical services, models of care, surgical procedures) to be adopted within the NHS, innovators must provide evidence to support their value proposition. </p>
+      <h2>Digital health technologies</h2>
 
-<h2 id="efficacy-and-safety">Efficacy and Safety</h2>
-<p>To satisfy regulatory requirements in the UK, innovators must provide evidence of efficacy and safety of their product through any relevant framework. More information about the regulations that apply to different types of innovation can be found in the Regulations section.</p>
-<h2 id="comparative-clinical-effectiveness">Comparative clinical effectiveness versus standard of care in the NHS</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups, require an understanding of interventions in the context of alternative care (comparative effectiveness). The evaluation of comparative effectiveness requires quantification of the effect of the technology being assessed and of the relevant comparator technologies representing standard of care in the NHS.</p>
-<p>NICE’s different evaluation programmes have different evidence requirements for showing clinical and cost-effectiveness.  Evidence can include anything from systematic reviews and meta-analyses to case studies. Furthermore, NICE has published a statement of intent on the Use of Broader Data in Guidance Development. The robustness of the evidence provided will be considered by the relevant decision-makers.</p>
+<h3>Clinical effectiveness</h3>
+<p>NICE has developed the evidence standards framework for digital health technologies, in collaboration with NHS England, Public Health England, MedCity and Digital Health London. The framework is a set of aspirational standards that set the level of evidence needed to support adoption of digital health technologies (DHTs) that are commissioned in the UK health and care system.</p>
+<p>The framework may be used for DHTs that incorporate artificial intelligence using fixed algorithms, but not for those using adaptive algorithms. However, these are expected to be included in future iterations of the standards.
+The framework has been incorporated into the NHS Digital Health Technology Standard and the guide from Public Health England on Evaluating Digital Health Products.</p>
+<h3>Economic evidence</h3>
+<p>An economic analysis, ranging from a simple budget impact analysis to a more complicated cost-utility analysis will be required for digital health technologies to assess the financial impact of their adoption. The exact type of economic analysis required will depend on several factors including the type of commissioning decision needed and the likely financial commitment.</p>
+<h3>Where to go for more information</h3>
+<p>The Evidence Standards Framework for Digital Health Technologies provides more informationor on  economics analysis.</p>
 
-<p>Further information on what type of evidence is needed to support your value proposition can be sought from NICE Scientific Advice.</p>
-<h2 id="economic-case">Economic case demonstrating value for money</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups have to make decisions with a focus on maximising health gains in the context of a fixed NHS budget. Therefore, an economic evaluation is needed to assess the economic impact of adopting healthcare interventions (that is, to compare the costs and benefits of a healthcare intervention to assess its value for money for the NHS).</p>
+<p>Bespoke support for developing your clinical and economic evidence case is available through <a href="https://www.nice.org.uk/about/what-we-do/life-sciences/scientific-advice">NICE Scientific Advice</a>.</p>
 
 
+{{ pagination({
+  "previousUrl": "/htc/innovators/diagnostics",
+  "previousPage": "Diagnostics tests",
+  "nextUrl": "/htc/innovators/evidence/other",
+  "nextPage": "Other types of innovation"
+}) }}
  
     </div>  
 

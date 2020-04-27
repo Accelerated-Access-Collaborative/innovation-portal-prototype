@@ -29,8 +29,15 @@
         </span>
       </h1>
 
+            <p class="nhsuk-lede-text">Medicines and medical devices are regulated by the Medicines and Healthcare products Regulatory Agency (MHRA). MHRA plays a leading role in protecting and improving public health and supports innovation through scientific research and development.</p>For a product or service (including medicinal products, medical devices, diagnostic tests, digital health technologies, non-clinical services, models of care, surgical procedures) to be adopted within the NHS, innovators must provide evidence to support their value proposition. </p>
+
       {{ contentsList({
         items: [
+          {
+            href: "/htc/innovators/evidence",
+            text: "Evidence overview",
+            current: "true"
+          },
           {
             href: "/htc/innovators/evidence/medicines",
             text: "Medicines"
@@ -54,7 +61,7 @@
         ]
       }) }}
 
-      <p>For a product or service (including medicinal products, medical devices, diagnostic tests, digital health technologies, non-clinical services, models of care, surgical procedures) to be adopted within the NHS, innovators must provide evidence to support their value proposition. </p>
+
 
 <h2 id="efficacy-and-safety">Efficacy and Safety</h2>
 <p>To satisfy regulatory requirements in the UK, innovators must provide evidence of efficacy and safety of their product through any relevant framework. More information about the regulations that apply to different types of innovation can be found in the Regulations section.</p>
@@ -66,7 +73,12 @@
 <h2 id="economic-case">Economic case demonstrating value for money</h2>
 <p>Decision makers in the NHS, including NICE and clinical commissioning groups have to make decisions with a focus on maximising health gains in the context of a fixed NHS budget. Therefore, an economic evaluation is needed to assess the economic impact of adopting healthcare interventions (that is, to compare the costs and benefits of a healthcare intervention to assess its value for money for the NHS).</p>
 
+{% from 'pagination/macro.njk' import pagination %}
 
+{{ pagination({
+  "nextUrl": "/htc/innovators/evidence/medicines",
+  "nextPage": "Medicines"
+}) }}
  
     </div>  
 

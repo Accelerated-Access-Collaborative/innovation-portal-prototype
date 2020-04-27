@@ -32,8 +32,13 @@
       {{ contentsList({
         items: [
           {
+            href: "/htc/innovators/evidence",
+            text: "Evidence overview"
+          },
+          {
             href: "/htc/innovators/evidence/medicines",
-            text: "Medicines"
+            text: "Medicines",
+            current: "true"
           },          
           {
             href: "/htc/innovators/evidence/devices",
@@ -54,19 +59,51 @@
         ]
       }) }}
 
-      <p>For a product or service (including medicinal products, medical devices, diagnostic tests, digital health technologies, non-clinical services, models of care, surgical procedures) to be adopted within the NHS, innovators must provide evidence to support their value proposition. </p>
+      <h2>Medicines</h2>
 
-<h2 id="efficacy-and-safety">Efficacy and Safety</h2>
-<p>To satisfy regulatory requirements in the UK, innovators must provide evidence of efficacy and safety of their product through any relevant framework. More information about the regulations that apply to different types of innovation can be found in the Regulations section.</p>
-<h2 id="comparative-clinical-effectiveness">Comparative clinical effectiveness versus standard of care in the NHS</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups, require an understanding of interventions in the context of alternative care (comparative effectiveness). The evaluation of comparative effectiveness requires quantification of the effect of the technology being assessed and of the relevant comparator technologies representing standard of care in the NHS.</p>
-<p>NICE’s different evaluation programmes have different evidence requirements for showing clinical and cost-effectiveness.  Evidence can include anything from systematic reviews and meta-analyses to case studies. Furthermore, NICE has published a statement of intent on the Use of Broader Data in Guidance Development. The robustness of the evidence provided will be considered by the relevant decision-makers.</p>
+<h3>Clinical effectiveness</h3>
+<p>The analysis of clinical effectiveness must be based on data from all relevant studies of the best available quality and should consider:</p>
 
-<p>Further information on what type of evidence is needed to support your value proposition can be sought from NICE Scientific Advice.</p>
-<h2 id="economic-case">Economic case demonstrating value for money</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups have to make decisions with a focus on maximising health gains in the context of a fixed NHS budget. Therefore, an economic evaluation is needed to assess the economic impact of adopting healthcare interventions (that is, to compare the costs and benefits of a healthcare intervention to assess its value for money for the NHS).</p>
+<ul>
+  <li>the range of typical patients</li>
+  <li>normal clinical circumstances</li>
+  <li>clinically relevant outcomes</li>
+  <li>comparison with relevant comparators</li>
+  <li>measures of both relative and absolute effectiveness with appropriate measures of uncertainty</li>
+  </ul>
 
+<p>Evidence of various types and from multiple sources may inform a NICE assessment of medicinal products evaluated through the Technology Appraisal or Highly Specialised Technologies Process. Evidence types may include randomised controlled trials (RCTs), non-randomised and non-controlled evidence as well as qualitative research.</p>
 
+<h3>Economic evidence</h3> 
+<p>The preferred form of economic evaluation of a medicine is a cost-effectiveness (specifically cost-utility) analysis. This type of economic analysis seeks to establish whether differences in expected costs between options can be justified in terms of changes in expected health effects.</p>
+<p>Key information underpinning a cost-utility analysis (CUA) includes data on clinical outcomes, health-related quality of life, costs and resource use, all of which are informed by different types of evidence.</p>
+<p>In addition, companies will need to provide a budget impact analysis to show the financial impact of their medicinal product over the first 3 years of its use in the NHS.</p>
+ 
+<h3>An illustrative example</h3>
+
+<p>A CUA was developed for the NICE assessment of Cladribine for treating relapsing–remitting multiple sclerosis (See the company submission and evidence review group report for detailed information).</p>
+<p>Note: This is an illustrative example provided only as a guide to demonstrate what a CUA for looks like and the types of inputs and outputs. It should be read in conjunction with the committee’s discussion of the evidence, and innovators should be mindful that the structure and inputs will not be equally applicable to all products. The appropriate approach for your product will depend on your evidence base and value proposition.</p>
+
+<h3>Where to go for more information</h3>
+
+<p>The following resources provide more information on the types and sources of evidence required to assess the clinical and cost effectiveness of medicinal products.</p>
+<ul>
+  <li>For the majority of medicines and therapeutics: The Guide to the methods of technology appraisal 2013 (sections 3 and 5)</li>
+  <li>For highly specialised technologies: Interim Process and Methods of the Highly Specialised Technologies Programme</li>
+  <li>For detailed technical guides: NICE’s Decision Support Unit have developed a suite of Technical Support Documents providing guidance on methodological approaches to consider when preparing evidence for NICE assessment</li>
+  <li>For more information on the Budget Impact Test</li>
+</ul>
+
+<p>Bespoke support for developing your clinical and economic evidence case is available through <a href="https://www.nice.org.uk/about/what-we-do/life-sciences/scientific-advice">NICE Scientific Advice</a>.</p>
+
+{% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+  "previousUrl": "/htc/innovators/evidence",
+  "previousPage": "Evidence overview",
+  "nextUrl": "/htc/innovators/evidence/devices",
+  "nextPage": "Medical devices"
+}) }}
  
     </div>  
 

@@ -32,6 +32,10 @@
       {{ contentsList({
         items: [
           {
+            href: "/htc/innovators/evidence",
+            text: "Evidence overview"
+          },
+          {
             href: "/htc/innovators/evidence/medicines",
             text: "Medicines"
           },          
@@ -41,7 +45,8 @@
           },
           {
             href: "/htc/innovators/evidence/diagnostics",
-            text: "Diagnostics tests"
+            text: "Diagnostics tests",
+            current: "true"
           },
           {
             href: "/htc/innovators/evidence/digital",
@@ -54,19 +59,36 @@
         ]
       }) }}
 
-      <p>For a product or service (including medicinal products, medical devices, diagnostic tests, digital health technologies, non-clinical services, models of care, surgical procedures) to be adopted within the NHS, innovators must provide evidence to support their value proposition. </p>
+      <h2>Diagnostics tests</h2>
 
-<h2 id="efficacy-and-safety">Efficacy and Safety</h2>
-<p>To satisfy regulatory requirements in the UK, innovators must provide evidence of efficacy and safety of their product through any relevant framework. More information about the regulations that apply to different types of innovation can be found in the Regulations section.</p>
-<h2 id="comparative-clinical-effectiveness">Comparative clinical effectiveness versus standard of care in the NHS</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups, require an understanding of interventions in the context of alternative care (comparative effectiveness). The evaluation of comparative effectiveness requires quantification of the effect of the technology being assessed and of the relevant comparator technologies representing standard of care in the NHS.</p>
-<p>NICE’s different evaluation programmes have different evidence requirements for showing clinical and cost-effectiveness.  Evidence can include anything from systematic reviews and meta-analyses to case studies. Furthermore, NICE has published a statement of intent on the Use of Broader Data in Guidance Development. The robustness of the evidence provided will be considered by the relevant decision-makers.</p>
+<h3>Clinical effectiveness</h3>
+<p>Evidence for a diagnostics assessment should ideally be based on end-to-end studies that follow patients from testing, through treatment, to final outcomes. As a minimum, evidence on diagnostic accuracy should be provided, although evidence of any impact on health outcomes or resource use following testing would also be useful. These end-to-end studies may be of varying quality and design and could include randomised controlled trials (RCTs), cohort studies, observational studies and meta-analysis of multiple studies.</p>
 
-<p>Further information on what type of evidence is needed to support your value proposition can be sought from NICE Scientific Advice.</p>
-<h2 id="economic-case">Economic case demonstrating value for money</h2>
-<p>Decision makers in the NHS, including NICE and clinical commissioning groups have to make decisions with a focus on maximising health gains in the context of a fixed NHS budget. Therefore, an economic evaluation is needed to assess the economic impact of adopting healthcare interventions (that is, to compare the costs and benefits of a healthcare intervention to assess its value for money for the NHS).</p>
+<h3>Economic evidence</h3>
+<p>A cost-effectiveness (specifically cost-utility) analysis is the preferred approach for assessing the value for money of a diagnostic test, in the context of its impact on the care pathway. This type of economic analysis seeks to establish whether differences in expected costs between options can be justified in terms of changes in expected health effects.</p>
 
+<p>Information needed for a cost-utility analysis (CUA) of a diagnostic test include data on clinical outcomes, health-related quality of life, costs and resource use, all of which are informed by different types of evidence. The outcomes and costs typically include those arising from treatments following the use of the test and cover the entire relevant portion of the care pathway.</p>
 
+<p>For diagnostic tests, the downstream consequences, that is the final health outcomes and costs, must be modelled to demonstrate the impact of the test result on decision making along the treatment and care pathway.</p>
+
+<h3>An illustrative example</h3>
+<p>PlGF-based testing to help diagnose suspected pre-eclampsia
+A CUA was developed for the NICE assessment of PlGF-based testing to help diagnose suspected pre-eclampsia (See the diagnostics assessment report for detailed information).</p>
+<p>Note: This is an illustrative example provided only as a guide to demonstrate what a CUA for a diagnostic test looks like and the types of inputs and outputs. It should be read in conjunction with the committee’s consideration of the evidence, and innovators should be mindful that the structure and inputs will not be equally applicable to all products. The appropriate approach for your product will depend on your evidence and value proposition.</p>
+<h3>Where to go for more information</h3>
+
+<p>The Diagnostics Assessment Programme manual provides more information on the types of evidence required for a diagnostics assessment.</p>
+
+<p>Bespoke support for developing your clinical and economic evidence case is available through <a href="https://www.nice.org.uk/about/what-we-do/life-sciences/scientific-advice">NICE Scientific Advice</a>.</p>
+
+{% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+  "previousUrl": "/htc/innovators/devices",
+  "previousPage": "Medical devices",
+  "nextUrl": "/htc/innovators/evidence/digital",
+  "nextPage": "Digital health technologies"
+}) }}
  
     </div>  
 
