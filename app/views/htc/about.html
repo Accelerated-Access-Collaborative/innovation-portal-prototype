@@ -1,0 +1,75 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        How Health Connect works 
+      </h1>
+
+      <p>Health Connect is a central point that enables:</p>
+
+      <ul>
+        <li>Innovators to submit information about their products and services</li>
+        <li>Accessor organisations to review the information that has been submitted</li>
+      </ul>
+
+      <p>This aims to reduce duplication by avoiding the need for innovators to provide information separately, and in different formats to multiple organisations. </p>
+
+      <p>Health Connect does not validate or approve innovations.</p>
+
+      <h2>Which products or services are eligible?</h2>
+
+      <p>Health Connect is intended for all medical devices, diagnostics, and digital health technologies at any stage of development- from idea, to prototype, to after UK market launch.</p>
+      <h3>Products and services most likely to benefit from Health Connect</h3>
+
+      <p>Products and services that are likely to offer substantial measurable benefits to patients (or other service users) or the UK health and care system compared to the current UK standard of care will get the most benefit from using Health Connect.</p>
+
+      <h3>Products and services least likely to benefit from Health Connect</h3>
+
+      <p>Products and services that are likely to offer similar benefits to to patients or the UK health and care system when compared to current UK practice are unlikely to benefit the most from using Health Connect. For example: </p>
+
+      <ul>
+        <li>Me-too products and services</li>
+        <li>product line extensions</li>
+        <li>iterations of existing products and services, unless it is associated with a significant change in the benefits that the technology offers.</li>
+      </ul>
+
+      <h2>Who has access to Health Connect data?</h2>
+
+      <p>Currently, a limited number of national organisations have access to the data in Health Connect because they are responsible for issuing national advice, guidance and policies about new and existing health technologies in England Scotland or Wales, or because they work with innovators to provide help and support in getting a health technology developed and adopted:</p>
+
+      <ul>
+        <li>National Institute for Health and Care Excellence (NICE)</li>
+        <li>NHS England</li>
+        <li>Health Technology Wales</li>
+        <li>Scottish Health Technologies Group</li>
+        <li>National Institute for Health Research (NIHR)</li>
+        <li>NHS Supply Chain</li>
+        <li>Academic Health Science Network</li>
+        <li>Accelerated Access Collaborative</li>
+        <li>Department for International Trade</li>
+
+        <p>Each organisation treats information entered onto Health Connect confidentially and securely and has signed up to the Health Connnect terms of use. </p>
+
+
+
+    </div>  
+
+  </div>
+{% endblock %}

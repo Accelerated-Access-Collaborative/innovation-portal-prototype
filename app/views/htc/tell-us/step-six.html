@@ -1,0 +1,79 @@
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Deployment - Tell us about your product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/htc/tell-us/start",
+  text: "Tell us about your product or service" 
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/htc/tell-us/step-six" method="post">
+
+
+        {% call fieldset({
+          legend: {
+            "text": "Has your product or service been deployed in an NHS or care setting?",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+          }) %}
+
+          {{ details({
+          "text": "Examples of an NHS care setting",
+          "HTML": "
+          <p>Examples of NHS care settings include:</p>
+            <ul>
+              <li>Accident and emergency</li>
+              <li>Hospitals</li>
+              <li>Doctor, dentist or pharmacy</li>
+              <li>Mental health</li>
+              <li>Health advice services</li>
+              <li>Community care</li>
+            </ul>
+           <p>If your product or service is not used in any of these care settings, we will ask you to describe how it has been deployed.</p>
+            "
+        }) }}
+
+
+          {{ radios({
+            "idPrefix": "care-setting",
+            "name": "care-setting",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+        }) }}
+        {% endcall %}
+
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Assessment - Main page
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Clinical effectiveness
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Evaluation of products and services
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/demand",
+            text: "Categories of need"
+          },
+          {
+            href: "/demand/page-two",
+            text: "Communication of needs"
+          },
+          {
+            href: "/demand/page-three",
+            text: "Information for innovators"
+          },
+          {
+            href: "/assess",
+            text: "Patient safety and regulation"
+          },
+          {
+            href: "/assess/page-two",
+            text: "Clinical effectiveness",
+            current: "true"
+          },
+          {
+            href: "/assess/page-three",
+            text: "Value for money"
+          }
+        ]
+      }) }}
+
+
+      <h2>Comparative effectiveness</h2>
+      <p>Praesent efficitur est magna, a lobortis tortor sagittis sit amet. Nullam mollis dui sed orci pellentesque, ut semper lectus tempor. Sed convallis erat at elit aliquam, eget commodo neque condimentum. Vivamus elementum efficitur libero, porttitor tincidunt mauris sollicitudin vel. Nulla facilisi. Ut at tristique risus. Integer risus arcu, dignissim id nibh a, scelerisque maximus ante. Quisque quis aliquam orci. Pellentesque fringilla ex ut mollis mollis. Donec congue fringilla ornare. Etiam eget ultrices augue. Vivamus eget enim felis. Maecenas auctor sollicitudin cursus.
+      </p>
+
+
+      <h2>Evaluation programmes</h2>
+      <p>
+       Duis interdum enim non tortor gravida rhoncus. Morbi in dignissim nisi. Suspendisse iaculis accumsan ullamcorper. Suspendisse dapibus quis enim ac accumsan. Aenean augue augue, elementum ac egestas quis, pharetra non augue. Nam tempus interdum nisl sed dignissim. Nam pulvinar faucibus ligula a molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam hendrerit velit ac dignissim venenatis. 
+      </p>
+
+
+
+
+      {{ pagination({
+        "previousUrl": "/assess",
+        "previousPage": "Patient safety and regulation",
+        "nextUrl": "/assess/page-three",
+        "nextPage": "Value for money"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

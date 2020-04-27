@@ -1,0 +1,95 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Assessor profile
+      </h1>
+
+            {{ contentsList({
+        items: [
+          {
+            href: "/htc/assessor-profile",
+            text: "Your details"
+          },
+          {
+            href: "/htc/manage-assessor-profile",
+            text: "Manage profile",
+            current: "true"
+          }
+        ]
+      }) }}
+
+<h2>Manage profile</h2>
+
+<form action="">
+
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from "input/macro.njk" import input %}
+
+{% call fieldset({
+
+}) %}
+
+  {{ input({
+    label: {
+      "text": 'Name'
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "address-line-1",
+    "name": "address-line-1",
+    "value": "Innes Vashun"
+  }) }}
+
+
+  {{ input({
+    label: {
+      "text": "Role"
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "address-town",
+    "name": "address-town",
+    "value": "Commercial Director"
+  }) }}
+
+  {{ input({
+    label: {
+      "text": "Organisation"
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "address-county",
+    "name": "address-county",
+    "value": "North East and North Cumbria AHSN"
+  }) }}
+
+
+{% endcall %}
+
+{% from 'button/macro.njk' import button %}
+
+{{ button({
+  "text": "Update profile"
+}) }}
+
+</form>
+
+    </div>  
+
+  </div>
+{% endblock %}

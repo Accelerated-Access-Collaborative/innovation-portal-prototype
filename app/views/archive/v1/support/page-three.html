@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Support - Main page
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Testing your idea
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Early stage support
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/support",
+            text: "Idea generation"
+          },
+          {
+            href: "/support/page-two",
+            text: "Product prototyping"
+          },
+          {
+            href: "/support/page-three",
+            text: "Testing your idea",
+            current: "true"
+          }
+        ]
+      }) }}
+
+      <h2>Clinical effectiveness</h2>
+      <p>
+        Maecenas mollis ornare consequat. Sed lobortis vestibulum elit, vitae lacinia magna. Curabitur sed felis ut nunc volutpat rhoncus. Proin sit amet malesuada arcu, non mattis risus. Phasellus quis dolor velit. Nunc interdum, justo eget sagittis dapibus, justo orci sagittis massa, eget finibus lectus est. 
+      </p>
+
+
+      {{ pagination({
+        "previousUrl": "/support/page-two",
+        "previousPage": "Product prototyping"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

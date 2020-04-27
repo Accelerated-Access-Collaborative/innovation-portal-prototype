@@ -1,0 +1,133 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Profile a product or service
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/service/start-page",
+  text: "Find a partner for your product or service" 
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Profile summary
+      </h1>
+      <p><a href="#recommended-actions">Skip to recommended actions</a></p>
+
+      {% from "summary-list/macro.njk" import summaryList %}
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "What category best describes your product or service?"
+            },
+            value: {
+              text: "Digital health"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/service/step-one",
+                  text: "Change",
+                  visuallyHiddenText: ""
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Are you aware of any regulations that apply your product or service?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/service/step-two",
+                  text: "Change",
+                  visuallyHiddenText: ""
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Have you tested your product or service with users?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/service/step-three",
+                  text: "Change",
+                  visuallyHiddenText: ""
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Do you have evidence for your product or service?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/service/step-four",
+                  text: "Change",
+                  visuallyHiddenText: ""
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Do you have a revenue model for your product or service?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/service/step-five",
+                  text: "Change",
+                  visuallyHiddenText: ""
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 id="recommended-actions">Recommended actions</h2>
+      <p>Based on your profile summary the recommended actions would be:</p>
+      <ul>
+        <li>Register and create an account with Healthtech Connect</li>
+      </ul>
+      {% from 'action-link/macro.njk' import actionLink %}
+        {{ actionLink({
+          "text": "Register a product or service with Healthtech Connect",
+          "href": "/service/htc-start-page"
+        }) }}
+    </div>
+  </div>
+{% endblock %}

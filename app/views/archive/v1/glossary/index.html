@@ -1,0 +1,198 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Demand - Main page
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+{% from 'nav-a-z/macro.njk' import azNav %}
+{% from 'list-panel/macro.njk' import listPanel %}
+
+<h1>Glossary</h1>
+
+{{ azNav({
+  "items": [
+    {
+      "label": "A"
+    },
+    {
+      "disable": "true",
+      "label": "B"
+    },
+    {
+      "label": "C"
+    },
+    {
+      "label": "D"
+    },
+    {
+      "label": "E"
+    },
+    {
+      "label": "F"
+    },
+    {
+      "label": "G"
+    },
+    {
+      "label": "H"
+    },
+    {
+      "label": "I"
+    },
+    {
+      "label": "J"
+    },
+    {
+      "label": "K"
+    },
+    {
+      "label": "L"
+    },
+    {
+      "label": "M"
+    },
+    {
+      "label": "N"
+    },
+    {
+      "label": "O"
+    },
+    {
+      "label": "P"
+    },
+    {
+      "label": "Q"
+    },
+    {
+      "label": "R"
+    },
+    {
+      "label": "S"
+    },
+    {
+      "label": "T"
+    },
+    {
+      "label": "U"
+    },
+    {
+      "label": "V"
+    },
+    {
+      "label": "W"
+    },
+    {
+      "label": "X"
+    },
+    {
+      "label": "Y"
+    },
+    {
+      "label": "Z"
+    }
+  ]
+}) }}
+
+{{ listPanel({
+  "label": "A",
+  "id": "A",
+  "backToTop": "true",
+  "backToTopLink": "#nhsuk-nav-a-z",
+  "items": [
+    {
+      "URL": "/glossary/a/accelerator",
+      "link": "Accelerator"
+    },
+    {
+      "URL": "/glossary",
+      "link": "Acquihire"
+    },
+    {
+      "URL": "/glossary",
+      "link": "Adoption"
+    }
+  ]
+}) }}
+
+{{ listPanel({
+  "label": "B",
+  "id": "B",
+  "backToTop": "true",
+  "backToTopLink": "#nhsuk-nav-a-z",
+  "items": [
+    {
+      "URL": "/glossary",
+      "link": "Benchmarking"
+    },
+    {
+      "URL": "/glossary",
+      "link": "Bootstrapping"
+    },
+    {
+      "URL": "/glossary",
+      "link": "Breakthrough innovation "
+    }
+  ]
+}) }}
+
+{{ listPanel({
+  "label": "C",
+  "id": "C",
+  "backToTop": "true",
+  "backToTopLink": "#nhsuk-nav-a-z",
+  "items": [
+    {
+      "URL": "/glossary",
+      "link": "Commercialisation"
+    },
+    {
+      "URL": "/glossary",
+      "link": "Core innovation "
+    },
+    {
+      "URL": "/glossary",
+      "link": "Crowdfunding "
+    }
+  ]
+}) }}
+
+{{ listPanel({
+  "label": "D",
+  "id": "D",
+  "backToTop": "true",
+  "backToTopLink": "#nhsuk-nav-a-z",
+  "items": [
+    {
+      "URL": "/glossary",
+      "link": "Depreciation"
+    },
+    {
+      "URL": "/glossary",
+      "link": "Diffusion of innovations"
+    },
+    {
+      "URL": "/glossary",
+      "link": "Disruption Innovation "
+    }
+  ]
+}) }}
+
+
+    </div>
+  </div>
+{% endblock %}

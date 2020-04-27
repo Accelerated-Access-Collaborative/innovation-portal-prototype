@@ -1,0 +1,108 @@
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Create an account
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/htc",
+      text: "Home"
+    }
+  ],
+  href: "/htc/start",
+  text: "Tell us about your product or service" 
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>Create an account</h1>
+      <p>Creating an account will allow you:</p>
+      <ul>
+        <li>Save a record of your technology for organisations to assess</li>
+        <li>Edit and update your record with additional information</li>
+        <li>Receive notifications from assessor organisations</li>
+      </ul>
+
+
+      <form action="#" method="post">
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from "input/macro.njk" import input %}
+
+{% call fieldset({
+  legend: {
+    "text": "Your account information",
+    "classes": "nhsuk-fieldset__legend--l",
+    "isPageHeading": true
+  }
+}) %}
+
+
+  {{ input({
+    label: {
+      "text": "Email address"
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "email",
+    "name": "email"
+  }) }}
+
+  {{ input({
+    label: {
+      "text": "Password"
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "password",
+    "name": "password",
+    type: "password"
+  }) }}
+
+  {{ input({
+    label: {
+      "text": "Repeat password"
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "password-repeat",
+    "name": "password-repeat",
+    type: "password"
+  }) }}
+
+{% endcall %}
+
+{% from 'checkboxes/macro.njk' import checkboxes %}
+
+{{ checkboxes({
+  "idPrefix": "example",
+  "name": "example",
+  "fieldset": {
+    "legend": {
+      "text": "Terms of use",
+      "classes": "nhsuk-fieldset__legend--s",
+      isPageHeading: true
+    }
+  },
+
+  "items": [
+    {
+      "value": "terms-agree",
+      "html": "We require to read and agree to the Data Inputters terms of use before adding information about your product or service."
+    }
+  ]
+}) }}
+
+      <a href="/htc/account/innovator-new" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Create account
+      </a>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

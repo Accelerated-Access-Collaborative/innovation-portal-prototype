@@ -1,0 +1,83 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  Population  - Add a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Population affected
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Section 5 of 13
+        </span>
+      </h1>
+
+      <form action="/htc/profile-stage-five" method="post">
+
+        {% call fieldset({
+        legend: {
+          "text": "Do you know yet what population your product or service will affect?",
+          "classes": "nhsuk-fieldset__legend--m",
+          "isPageHeading": true
+        }
+        }) %}
+
+        {{ details({
+          "text": "What is a population?",
+          "HTML": "
+          <p>A population and a population subgroup is where the use of a technology:</p>
+          <ul>
+            <li>has different benefits</li>
+            <li>involves different staff</li>
+            <li>is used in different care pathways</li>
+            <li>can be associated with different costs</li>
+          </ul>
+            "
+        }) }}
+
+
+        {{ radios({
+          "idPrefix": "population-aware",
+          "name": "population-aware",
+          "items": [
+        {
+          "value": "yes",
+          "text": "Yes",
+          "hint": {
+            "text": "We will ask you to provide further details about this"
+          }
+        },
+        {
+          "value": "No",
+          "text": "No",
+          "hint": {
+            "text": "You may be asked to provide this information at a later stage"
+          } 
+        }
+      ]
+      }) }}
+      {% endcall %}
+
+
+      {{ button({
+        "text": "Continue"
+      }) }}
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

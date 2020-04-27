@@ -1,0 +1,284 @@
+
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Your innovations
+      </h1>
+
+
+      <p>We will ask you some additional information about your product or service in order to match you with the most appropriate organisations.</p>
+
+
+            {% from 'action-link/macro.njk' import actionLink %}
+        {{ actionLink({
+          "text": "Continue telling us about your product or service",
+          "href": "/htc/account/questions/1-product/one"
+        }) }}
+
+      <p>Your progress will be saved here whenever you save complete a section and you can resume at any point by logging in.</p> 
+
+            <h2>
+        Tell us about your product or service
+      </h2>
+
+        <h3 class="nhsuk-u-margin-bottom-1">1. Product or service details</h3>
+
+        {{ table({
+          panel: false,
+          caption: "Skin symptoms and possible causes",
+          firstCellIsHeader: false,
+          rows: [
+            [
+              {
+                html: "Name of your product or service"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Product or service category"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Technologies used in your product or service"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Purpose of your product or service"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Alternatives to your product or service"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ]
+          ]
+        }) }}
+
+        <h3 class="nhsuk-u-margin-bottom-1">2. Company or organisation details</h3>
+        {{ table({
+          panel: false,
+          caption: "Skin symptoms and possible causes",
+          firstCellIsHeader: false,
+          rows: [
+            [
+              {
+                html: "Company or organisation name"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Role in the company or organisation"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Permission to register on behalf of your company"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ]
+          ]
+        }) }}
+
+
+        <h3 class="nhsuk-u-margin-bottom-1">3. Benefits and evidence</h3>
+        {{ table({
+          panel: false,
+          caption: "Skin symptoms and possible causes",
+          firstCellIsHeader: false,
+          rows: [
+            [
+              {
+                html: "Clinical benefits"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ]
+          ]
+        }) }}        
+
+        <h3 class="nhsuk-u-margin-bottom-1">4. Population and pathway</h3>
+        {{ table({
+          panel: false,
+          caption: "Skin symptoms and possible causes",
+          firstCellIsHeader: false,
+          rows: [
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ]
+          ]
+        }) }}     
+
+        <h3 class="nhsuk-u-margin-bottom-1">5. Market understanding and costs</h3>
+        {{ table({
+          panel: false,
+          caption: "Skin symptoms and possible causes",
+          firstCellIsHeader: false,
+          rows: [
+            [
+              {
+                html: "Market research"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Intellectual property"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Freedom to operate"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ]
+          ]
+        }) }}     
+
+        <h3 class="nhsuk-u-margin-bottom-1">6. Context and deployment</h3>
+        {{ table({
+          panel: false,
+          caption: "Skin symptoms and possible causes",
+          firstCellIsHeader: false,
+          rows: [
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ],
+            [
+              {
+                html: "Name of the question group here"
+              },
+              {
+                html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">Incomplete</span>"
+              }
+            ]
+          ]
+        }) }}             
+
+      <!--<p>We will ask you some additional information about your product or service in order to match you with the most appropriate organisations.</p>
+        {{ details({
+          "text": "Preview the sections",
+          "HTML": "
+            <ol>
+                <li>Company or organisation details </li>
+                <li>Product or service type </li>
+                <li>Product or service purpose</li>
+                <li>Alternatives available</li>
+                <li>Population affected </li>
+                <li>Market understanding </li>
+                <li>Clinical benefits </li>
+                <li>Evidence of  the benefits</li>
+                <li>Regulatory information</li>
+                <li>Testing in context</li>
+                <li>Care pathway</li>
+                <li>Cost details, and comparative benefit</li>
+                <li>Deployment</li>
+            </ol>
+            "
+        }) }}
+      <p>Your progress will be saved whenever you save complete a section and you can resume at any point by logging in.</p>-->
+
+
+
+    </div>  
+
+  </div>
+{% endblock %}

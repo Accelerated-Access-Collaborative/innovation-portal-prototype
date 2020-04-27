@@ -1,0 +1,104 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        ChatHealth
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Innovation profile
+        </span>
+        <span class="nhsuk-tag nhsuk-tag--dark-grey">In progress</span>
+
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/htc/innovation-profile",
+            text: "Innovation details"
+          },
+          {
+            href: "/htc/assessor-comments",
+            text: "Assessor comments",
+            current: "true"
+          },
+          {
+            href: "/htc/manage-profile",
+            text: "Manage profile"
+          }
+        ]
+      }) }}
+
+      <h2>Assessor comments</h2>
+
+      <form action="">
+
+        {% from 'textarea/macro.njk' import textarea %}
+
+        {{ textarea({
+          "name": "comment",
+          "id": "comment",
+          "rows": "3",
+          "label": {
+            "text": "Add a comment"
+          },
+          "hint": {
+            "text": "Your name and organisation will be included with your comment."
+          }
+        }) }}
+
+        {% from 'button/macro.njk' import button %}
+
+        {{ button({
+          "text": "Add comment"
+        }) }}
+
+       </form> 
+
+      <ul class="nhsuk-list">
+        <li class="nhsuk-body-s">21 April 2020, 13:23</li>
+        <li>Initial assessment of the technology and benefits is promising but awaiting submission of evidence to proceed</li>
+        <li><span class="nhsuk-u-font-weight-bold">Andrew Birds</span>, NHS Supply Chain</li>
+      </ul>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+      <ul class="nhsuk-list">
+        <li class="nhsuk-body-s">20 April 2020, 10:45</li>
+        <li>This seems very similar to a previous submission called Health Chat. Does anyone have any record of this?</li>
+        <li><span class="nhsuk-u-font-weight-bold">Caroline Davis</span>, Eastern AHSN</li>
+      </ul>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <ul class="nhsuk-list">
+        <li class="nhsuk-body-s">04 April 2020, 09:19</li>
+        <li>Will be reviewing this submission as part of our regular of commercial directors as some questions and concerns have been raised about the cost benefits infromation provided.</li>
+        <li><span class="nhsuk-u-font-weight-bold">Erin Finch</span>, West Midlands AHSN</li>
+      </ul>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+      <ul class="nhsuk-list">
+        <li class="nhsuk-body-s">17 March 2020, 18:26</li>
+        <li>On initial assessment, this does not appear to be something that we need to get involved in from a regulatory POV</li>
+        <li><span class="nhsuk-u-font-weight-bold">Graeme Hill</span>, NICE</li>
+      </ul>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+    </div>  
+
+  </div>
+{% endblock %}

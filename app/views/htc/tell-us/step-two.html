@@ -1,0 +1,80 @@
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Regulations - Tell us about your product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/htc/tell-us/start",
+  text: "Tell us about your product or service" 
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/htc/tell-us/step-two" method="post">
+
+        {% call fieldset({
+          legend: {
+            "text": "Do you know which regulations that apply your product or service?",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+          }) %}
+
+          {{ details({
+          "text": "What are the different types of regulation?",
+          "HTML": "
+          <p>Depending on the type of product or service, different regulations can apply.</p>
+            <p>The main types of regulation that apply to products and services in the UK are:</p>
+            <ul>
+                <li>A CE marking to indication compliance with EU safety, health and environmental requirements</li>
+                <li>Marketing authorisation for new pharmaceutical, medicine or drug treatments</li>
+                <li>Care Quality Commission (CQC) registration for providers of regulated activity</li>
+            </ul>
+            <p>The National Institure for Clinical Excellence (NICE) also publish detailed guidance for new products and services.</p>
+            <p>If you are looking to promote a product or service outside of the UK, different regulations will apply. Healthcare UK provide information and support for healthcare providers to do business overseas.</p>
+            "
+        }) }}
+
+          {{ radios({
+            "idPrefix": "regulation-aware",
+            "name": "regulation-aware",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+        }) }}
+        {% endcall %}
+
+        {% from 'details/macro.njk' import details %}
+
+        
+
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

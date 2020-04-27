@@ -1,0 +1,98 @@
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Summary - Tell us about your product or service
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/htc/tell-us/start",
+  text: "Tell us about your product or service" 
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>
+        Summary
+      </h1>
+
+      {% from "summary-list/macro.njk" import summaryList %}
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "What category best describes your product or service?"
+            },
+            value: {
+              text: " Machine learning with fixed or adaptive algorithm "
+            }
+          },
+          {
+            key: {
+              text: "Do you know which regulations that apply your product or service?"
+            },
+            value: {
+              text: "Yes"
+            }
+          },
+          {
+            key: {
+              text: "Have you tested your product or service with users?"
+            },
+            value: {
+              text: "Yes"
+            }
+          },
+          {
+            key: {
+              text: "Do you have evidence for your product or service?"
+            },
+            value: {
+              text: "Yes"
+            }
+          },
+          {
+            key: {
+              text: "Do you know what cost savings your product or service would create?"
+            },
+            value: {
+              text: "Yes"
+            }
+          },
+          {
+            key: {
+              text: "Has your product or service been deployed in an NHS or care setting?"
+            },
+            value: {
+              text: "Yes"
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+  </div>
+    <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h2>Next step</h2>
+      <p>Based on your answers, we would recommend that you register your product or service with Health Connect</p>
+      <p>To register with Health Connect we need you to create an account.</p>
+      {% from 'action-link/macro.njk' import actionLink %}
+        {{ actionLink({
+          "text": "Continue to create an account",
+          "href": "/htc/create-account"
+        }) }}
+    </div>
+  </div>
+{% endblock %}

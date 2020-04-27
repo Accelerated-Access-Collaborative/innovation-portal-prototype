@@ -1,0 +1,53 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-width-container">
+
+      <h1>
+        Pathway reports
+      </h1>
+
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+    <a class="nhsuk-promo__link-wrapper" href="#">
+      <div class="nhsuk-promo__content">
+        <h2 class="nhsuk-promo__heading">Portfolio report</h2>
+        <p class="nhsuk-promo__description">Overview of technologies shared with your assessor organisation.</p>
+      </div>
+    </a>  
+  </div>
+
+  <div class="nhsuk-grid-column-one-half">
+    <a class="nhsuk-promo__link-wrapper" href="#">
+      <div class="nhsuk-promo__content">
+        <h2 class="nhsuk-promo__heading">Performance report</h2>
+        <p class="nhsuk-promo__description">Technologies by category and stage of support.</p>
+      </div>
+    </a>  
+  </div>
+</div>
+
+
+
+
+
+    </div>  
+
+  </div>
+{% endblock %}

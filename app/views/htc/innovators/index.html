@@ -1,0 +1,131 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Information for innovators
+      </h1>
+      <p class="nhsuk-lede-text">
+        Up to date information and guidance for innovators.
+      </p>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "#how-the-nhs-is-structured",
+            text: "How the NHS is structured"
+          },          
+          {
+            href: "#what-innovations-does-the-nhs-need",
+            text: "What innovations does the NHS need?"
+          },
+          {
+            href: "#sources-of-funding",
+            text: "Sources of funding"
+          },
+          {
+            href: "#latest-news-and-information",
+            text: "Latest news and information"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h2>Guides for innovators</h2>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-third">
+        <a class="nhsuk-promo__link-wrapper" href="/htc/innovators/regulations">
+        <div class="nhsuk-promo__content">
+          <h2 class="nhsuk-promo__heading">Regulations</h2>
+          <p class="nhsuk-promo__description">Overview of regulatory requirements for products and services in the UK.</p>
+        </div>
+      </a>
+    </div>
+    <div class="nhsuk-grid-column-one-third">
+      <a class="nhsuk-promo__link-wrapper" href="/htc/innovators/evidence">
+        <div class="nhsuk-promo__content">
+          <h2 class="nhsuk-promo__heading">Evidence</h2>
+          <p class="nhsuk-promo__description">How to provide evidence to support your value proposition.</p>
+        </div>
+      </a>
+    </div> 
+    <div class="nhsuk-grid-column-one-third">
+      <a class="nhsuk-promo__link-wrapper" href="/htc/innovators/ip">
+        <div class="nhsuk-promo__content">
+          <h2 class="nhsuk-promo__heading">Intellectual property</h2>
+          <p class="nhsuk-promo__description">Types of intellectual property rights and how to protect them.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2 id="how-the-nhs-is-structured">How the NHS is structured</h2>
+      <p>It’s important to remember that the NHS is not one big organisation, but lots of organisations which commission and provide healthcare.</p>
+      <p>Each organisation has their own needs, processes and infrastructure. This influences what types of innovations they are looking for, and how they go about procuring and implementing them.</p>  
+      <p>The national priorities of the NHS are shared with the different regions of the UK.  Each region also has their own local needs. This is why it’s worth knowing both the “big picture” priorities, as well as specific needs and issues locally.</p>
+      <p>The King’s Fund have produced <a href="https://www.kingsfund.org.uk/audio-video/how-does-nhs-in-england-work">a video that explains the structure of the NHS</a>.</p>  
+      
+      <h2 id="what-innovations-does-the-nhs-need">What innovations does the NHS need?</h2>
+
+      <h3>Needs for specific conditions or patient groups</h3>
+      <p>The James Lind Alliance and the National Institute for Health Research (NIHR) set <a href="http://www.jla.nihr.ac.uk/priority-setting-partnerships/">priorities for certain conditions in partnership with patients</a>. </p>
+      <p>If you are looking to create an innovation that looks at a specific condition or with specific patient groups, relevant charities will often be able to advise and sometimes offer targeted support or funding.
+Regional needs in England</p>
+ 
+<p>Healthcare providers and commissioners in England work with the Academic Health Science Networks (AHSNs) to find innovations that meet their <a href="https://www.ahsnnetwork.com/wp-content/uploads/2019/07/National-survey-of-local-research-and-innovation-needs-of-the-NHS.pdf">specific priorities</a>. Where there is nothing available that meets their needs, AHSNs may <a href="https://www.ahsninnovationexchange.co.uk/challenges">publish challenges</a> or calls for ideas, some of which are local and some apply nationally.</p>
+ 
+
+<h3>Regional needs in Wales, Scotland and Northern Ireland</h3>
+
+<h3>National research needs</h3>
+<p>NHS England undertook a <a href="https://www.england.nhs.uk/publication/nhs-englands-research-needs-assessment-2018/">Research Needs Assessment</a> in 2018 which identified research themes in the priority areas of Urgent and Emergency Care, Diabetes, Cancer, Mental Health, Primary Care, Nursing and Medical Directorate’s.</p>
+
+<h3>Strategic national priorities</h3>
+<p>The <a href="https://www.longtermplan.nhs.uk">NHS Long Term Plan</a> published in 2017 sets the strategic direction for the NHS over the following decade. The most relevant strategies or goals for innovators in the Long-Term Plan are:</p>
+<uL>
+  <li><a href="https://www.longtermplan.nhs.uk/online-version/chapter-1-a-new-service-model-for-the-21st-century/">Integrated care</a></li>
+  <li><a href="https://www.longtermplan.nhs.uk/online-version/chapter-2-more-nhs-action-on-prevention-and-health-inequalities/">Disease prevention and reducing health inequalities</a></li>
+  <li><a href="https://www.longtermplan.nhs.uk/online-version/chapter-3-further-progress-on-care-quality-and-outcomes/">Quality improvement and care outcomes</a></li>
+  <li><a href="https://www.longtermplan.nhs.uk/online-version/chapter-4-nhs-staff-will-get-the-backing-they-need/">Workforce</a></li>
+  <li><a href="https://www.longtermplan.nhs.uk/online-version/chapter-5-digitally-enabled-care-will-go-mainstream-across-the-nhs/">Technology and digital strategy</a></li>
+  <li><a href="https://www.longtermplan.nhs.uk/online-version/chapter-6-taxpayers-investment-will-be-used-to-maximum-effect/">Funding and finance</a></li>
+  <li><a href="https://www.longtermplan.nhs.uk/online-version/chapter-7-next-steps/">Implementation</a></li>
+</ul>
+ 
+<h3>Government priorities</h3>
+ <p>The three strategic priorities of the current Secretary of State, Matt Hancock, are prevention, workforce and technology, with policy papers published on two of these:</p>
+ <ul>
+  <li><a href="https://www.gov.uk/government/publications/the-future-of-healthcare-our-vision-for-digital-data-and-technology-in-health-and-care/">Healthtech Vision</a>, with priorities in infrastructure, digital services, innovation, and skills and culture</li>
+  <li><a href="https://www.gov.uk/government/publications/prevention-is-better-than-cure-our-vision-to-help-you-live-well-for-longer">Prevention is better than cure</a> paper</li>
+</ul>
+<p>The <a href="https://topol.hee.nhs.uk">Topol review</a> provides the most relevant information on preparing the workforce in healthcare for the future</p> 
+      <h2 id="sources-of-funding">Sources of funding</h2>
+      <p>Funding for research, development and implementation of an innovation can be fragmented and is provided by a range of government and arms-length bodies, private investors and banks.</p>
+
+      <h2 id="latest-news-and-information">Latest news and information</h2> 
+      <p>The Medicines and Healthcare products Regulatory Agency (MHRA) publish regular <a href="https://medregs.blog.gov.uk/">updates on the latest regulatory information</a> on their blog. </p>
+      <p>The Academic Health Science Network (AHSN) maintain a news section that <a href="https://www.ahsninnovationexchange.co.uk/news/industry">provides general innovation news</a> from both national and local sources.</p>
+      <p>NHS England and the Accelerated Access Collaborative (AAC) run <a href="https://www.events.england.nhs.uk/events">regular events for innovators in the UK</a>.</p>
+    </div>  
+
+  </div>
+{% endblock %}

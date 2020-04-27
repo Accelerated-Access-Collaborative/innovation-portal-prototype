@@ -1,0 +1,216 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-width-container">
+
+      <h1>
+        Companies and contacts
+      </h1>
+
+      {% from 'details/macro.njk' import details %}
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Filter companies",
+        "HTML": "
+        <p>Filter technologies by:</p>
+        <ul>
+          <li>Location</li>
+          <li>Type</li>
+        </ul>"
+      }) }}
+
+      <p>Download CSV file of <a href="#">entire list</a> or  <a href="#">filtered view</a></p>
+
+      {% from 'tables/macro.njk' import table %}
+
+      {{ table({
+        panel: false,
+        caption: "Skin symptoms and possible causes",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Company name"
+          },
+          {
+            text: "Contact"
+          },
+          {
+            text: "Date added"
+          },
+          {
+            text: "Communication preference"
+          }
+        ],
+        rows: [
+          [
+            {
+              html: "<a href=\"/htc/company-profile\">Chat Health</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Droplet</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Fibricheck</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Joint Pain Advice</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">MediShout</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">ORCHA</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">RespiraSense</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Safe Steps</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Skin Analytics</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Virti</a>"
+            },
+            {
+              html: "<a href=\"#\">Firstname Surname</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              text: "Email"
+            }
+          ]
+        ]
+      }) }}
+
+      {% from 'pagination/macro.njk' import pagination %}
+
+      {{ pagination({
+        "previousUrl": "#",
+        "previousPage": "Previous 10 results",
+        "nextUrl": "#",
+        "nextPage": "Next 10 results"
+      }) }}
+
+    </div>  
+
+  </div>
+{% endblock %}

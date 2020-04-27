@@ -1,0 +1,142 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-width-container">
+
+      <h1>
+        ChatHealth
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+          Innovation profile
+        </span>
+        <span class="nhsuk-tag nhsuk-tag--dark-grey">In progress</span>
+      </h1>
+
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/htc/technology-profile",
+            text: "Innovation details",
+            current: "true"
+          },
+          {
+            href: "/htc/assessor-comments",
+            text: "Assessor comments"
+          },
+          {
+            href: "/htc/manage-profile",
+            text: "Manage profile"
+          }
+        ]
+      }) }}
+
+      <h2>Innovation details</h2>
+
+      {% from "summary-list/macro.njk" import summaryList %}
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Name of product or service"
+            },
+            value: {
+              text: " Chat Health"
+            }
+          },
+          {
+            key: {
+              text: "Company or organisation"
+            },
+            value: {
+              text: "Chat Health"
+            }
+          },
+          {
+            key: {
+              text: "Product or service categories"
+            },
+            value: {
+              html: "Medical technology for treatment<br>Digital health platform, mobile app or cloud service"
+            }
+          },
+          {
+            key: {
+              text: "Purpose of product or service"
+            },
+            value: {
+              text: "Enabling care, services or communication "
+            }
+          }
+        ]
+      }) }}
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Populations and subgroups",
+        "HTML": "
+        <p></p>"
+      }) }} 
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Market understanding",
+        "HTML": "
+        <p></p>"
+      }) }} 
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Benefits and evidence",
+        "HTML": "
+        <p></p>"
+      }) }} 
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Regulation and testing",
+        "HTML": "
+        <p></p>"
+      }) }}
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Care pathways",
+        "HTML": "
+        <p></p>"
+      }) }} 
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Commercial model",
+        "HTML": "
+        <p></p>"
+      }) }} 
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Deployment",
+        "HTML": "
+        <p></p>"
+      }) }} 
+
+
+    </div>  
+
+  </div>
+{% endblock %}

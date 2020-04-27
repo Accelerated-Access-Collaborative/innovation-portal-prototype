@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Regulatory awareness - Profile a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/service/start-page",
+  text: "Find a partner for your product or service" 
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/service/step-four" method="post">
+
+        {% call fieldset({
+          legend: {
+            "text": "Do you have evidence for your product or service?",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+          }) %}
+
+          {{ radios({
+            "idPrefix": "evidence-available",
+            "name": "evidence-available",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+        }) }}
+        {% endcall %}
+
+        {{ details({
+          "text": "What kind of evidence is expected?",
+          "HTML": "
+          <p>All healthcare products and services require evidence to be assessed for use.</p>
+            <p>The type of evidence you will need to provide include:</p>
+            <ul>
+              <li>Testimony from experts (e.g. patients, clinicians, academics)</li>
+              <li>Unpublished data or data presented at a conference</li>
+              <li>Data published but not in a peer reviewed journal</li>
+              <li>Randomised controlled trial published in a peer reviewed journal</li>
+              <li>Non-randomised comparative data published in a peer reviewed journal</li>
+            </ul>
+           <p>Evidence will be assessed based on how well it establishes the safety and effectiveness of a product and service for the intended users.</p>
+           <p>If you have a non-clinical product or service, different evidence standards may apply.</p>
+            "
+        }) }}
+
+
+        {{ button({
+          "text": "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

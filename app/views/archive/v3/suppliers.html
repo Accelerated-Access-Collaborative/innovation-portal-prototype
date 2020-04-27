@@ -1,0 +1,84 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Identifying innovations for help and support
+        <span class="nhsuk-caption-xl">Information for innovators</span>
+      </h1>
+
+      {% from 'contents-list/macro.njk' import contentsList %}
+
+      {{ contentsList({
+        items: [
+          {
+            href: "",
+            text: "Identifying innovations to support",
+            current: "true"
+          },
+          {
+            href: "",
+            text: "Understanding patient and system needs"
+          },
+          {
+            href: "",
+            text: "Meeting requirements for quality, safety and value"
+          }
+        ]
+      }) }}
+
+
+      <p>There is a range of help available to support the development and adoption of health technologies, from getting clinical and academic input and advice on an idea, to obtaining funding, generating evidence, and commercialising a technology ready for wide spread adoption.</p>
+
+      <p>By entering a technology on Health Connect, innovators can find out about the help and support that is available to them.</p>
+
+      <p>If a technology is not on Health Connect, the innovator may not be aware they need help or support, or may not know what help and support is available to them.</p>
+
+
+      <h2>Identifying innovations that require health technology assessment (HTA) at a national level</h2>
+      <p>Some technologies need national-level guidance, advice or policies to support their appropriate use in the UK health and care system. These technologies will be put through a Health Technology Assessment process to assess the intended and unintended consequences of using a technology within the UK health and care system. Usually this focuses on finding out how clinically and cost effective the technology is, in comparison to current UK practice.</p>
+      <p>It can be difficult to know which technologies need national level guidance, advice or policies. By using Health Connect innovators can find out if their technology is likely to be relevant to go through this process, and if so find out more about what is involved and expected timescales.</p>
+
+      {% from 'details/macro.njk' import details %}
+
+      {{ details({
+        "text": "Which organisations do health technology assessments?",
+        "HTML": "
+        <p>The following organisations use Health Connect to identify technologies that would benefit from HTA at a national level:</p>
+          <ul>
+              <li>NICE medical technologies evaluation programme: identifies technologies for medtech innovation briefings and NICE guidance (Medical Technologies Guidance, Diagnostics Guidance, Technology Appraisals Guidance, Interventional Procedures Guidance)</li>
+              <li>NHS England Specialised Comissioning: identifies technologies for specialised comissioning policies or service specifications. </li>
+              <li>Health Technology Wales</li>
+              <li>Scottish Health Technologies Group</li>
+          </ul>
+        "
+      }) }}
+
+      <h2>Support for horizon scanning</h2>
+
+      <p>Horizon scanning is a process to identify important trends, opportunities, new technologies and challenges. It is used to support financial, policy, process and research planning, so that systems can take advantage of developments or are better prepared when they occur.</p>
+
+      <p>Health Connect is one of many tools used to support horizon scanning for the UK health and social care system. By entering a technology on Health Connect, innovators can be sure that their technology will be included in horizon scanning activities.</p>
+
+      <p>If a technology is not on Health Connect, it may not be captured in horizon scanning activities. This means that the UK health and social care system may be unaware of the opportunity or challenge associated with use of the technology which may have an impact on legal, regulatory, process or procurement issues that lead to delays in the development and adoption of it.</p>
+
+    </div>  
+
+  </div>
+{% endblock %}

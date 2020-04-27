@@ -1,0 +1,71 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Guide to regulations - Information for innovators
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/htc",
+      text: "Home"
+    }
+  ],
+  href: "/htc/innovators",
+  text: "Information for innovators" 
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Surgical procedures and techniques
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Regulations
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/htc/innovators/regulations",
+            text: "Medicines and medical devices"
+          },          
+          {
+            href: "/htc/innovators/regulations/digital",
+            text: "Digital products, services and components"
+          },
+          {
+            href: "/htc/innovators/regulations/surgical",
+            text: "Surgical procedures and techniques",
+            current: "true"
+          },
+          {
+            href: "/htc/innovators/regulations/other",
+            text: "Models of care and other innovations"
+          }
+        ]
+      }) }}
+
+<p>Innovative surgical procedures and techniques do not have specific regulatory approval processes, though any medical products and devices that are used may require separate approvals. </p>
+
+ <p> The Royal College of Surgeons of England have produced <a href="https://www.rcseng.ac.uk/standards-and-research/standards-and-guidance/good-practice-guides/surgical-innovation/">a best-practice guide to surgical innovation</a> which is applicable to the whole of the UK.</p>
+
+{% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+  "previousUrl": "/htc/innovators/regulations/digital",
+  "previousPage": "Digital products, services and components",
+  "nextUrl": "/htc/innovators/regulations/other",
+  "nextPage": "Models of care and other innovations"
+}) }}
+
+    
+    </div>  
+
+  </div>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Local and regional offers - Find an innovation partner
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Local and regional offers
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Finding an innovation partner
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/partners",
+            text: "National organisations"
+          },
+          {
+            href: "/partners/page-two",
+            text: "Local and regional offers",
+            current: "true"
+          },
+          {
+            href: "/partners/page-three",
+            text: "Funding partners"
+          }
+        ]
+      }) }}
+      <h2>Academic Health Science Networks (AHSN)</h2>
+      <p>
+        Fusce ex sem, pellentesque ac nunc ut, suscipit eleifend neque. Vestibulum nec felis massa. Nunc neque dui, sollicitudin at cursus ornare, tempus eu enim. Vestibulum accumsan non erat varius finibus. 
+      </p>
+            <ul>
+        <li>Etiam aliquam nisl non imperdiet venenatis.</li>
+        <li>Sed a tortor non tortor hendrerit semper.</li>
+        <li>Mauris ac sem sit amet nibh condimentum faucibus eu nec urna.</li>
+        <li>Nullam id nisi sed elit pretium accumsan.</li>
+       </ul> 
+
+{{ actionLink({
+  "text": "Find a partner",
+  "href": "/partners/start-page"
+}) }}  
+       
+      <h2>Hospitals</h2>
+      <p>
+        Aliquam in justo vel urna tincidunt efficitur. Quisque lacinia bibendum erat eu porttitor. Aliquam risus erat, blandit finibus rutrum varius, finibus vel enim. Vestibulum facilisis non dui id tristique. Nullam leo elit, vestibulum ut est non, volutpat eleifend lectus. Donec interdum nisl vel pulvinar iaculis. Nam tempus malesuada nulla. Etiam fermentum quis est sit amet euismod. Aenean sed euismod urna, vitae mattis. 
+      </p>
+            <ul>
+        <li>Etiam aliquam nisl.</li>
+        <li>Sed a tortor non tortor hendrerit semper.</li>
+        <li>Mauris ac sem sit amet nibh .</li>
+        <li>Nullam id accumsan.</li>
+       </ul> 
+
+
+      {{ pagination({
+        "previousUrl": "/partners",
+        "previousPage": "National organisations",
+        "nextUrl": "/partners/page-three",
+        "nextPage": "Funding partners"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,379 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-width-container">
+
+      <h1>
+        Innovations and activity
+      </h1>
+
+<details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Filter products and services
+    </span>
+  </summary>
+  <div class="nhsuk-details__text"> 
+   <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+
+      {{ checkboxes({
+              "idPrefix": "category-filter",
+              "name": "category-filter",
+              "fieldset": {
+                "legend": {
+                  "text": "Filter by category",
+                  "classes": "nhsuk-fieldset__legend--s",
+                  isPageHeading: false
+                }
+              },
+              "items": [
+                {
+                  "value": "pharma",
+                  "text": "Pharmaceutical"
+                },
+                {
+                  "value": "med-tech",
+                  "text": "Diagnostic device"
+                },
+                {
+                  "value": "med-tech",
+                  "text": "Medical technology for treatment"
+                },
+                {
+                  "value": "platform",
+                  "text": "Digital health platform, mobile app or cloud service"
+                },
+                {
+                  "value": "framework",
+                  "text": "Care pathway, model of care or framework"
+                }
+
+              ]
+            }) }}
+
+          </div>
+          <div class="nhsuk-grid-column-one-half">
+
+            {{ checkboxes({
+                    "idPrefix": "status-filter",
+                    "name": "status-filter",
+                    "fieldset": {
+                      "legend": {
+                        "text": "Filter by completion status",
+                        "classes": "nhsuk-fieldset__legend--s",
+                        isPageHeading: false
+                      }
+                    },
+                    "items": [
+                      {
+                        "value": "population",
+                        "text": "Populations and subgroups"
+                      },
+                      {
+                        "value": "market",
+                        "text": "Market understanding"
+                      },
+                      {
+                        "value": "evidence",
+                        "text": "Benefits and evidence"
+                      },
+                      {
+                        "value": "regulation",
+                        "text": "Regulation and testing"
+                      },
+                      {
+                        "value": "pathway",
+                        "text": "Care pathways"
+                      },
+                      {
+                        "value": "commercial",
+                        "text": "Commercial model"
+                      },
+                      {
+                        "value": "delpoyment",
+                        "text": "Deployment "
+                      }
+
+                    ]
+                  }) }}
+
+                </div>
+              </div>
+                {{ button({
+                  "text": "Apply filters"
+                }) }}
+                {% from 'button/macro.njk' import button %}
+
+            </div>
+
+  </details>
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+      <p>Sort by <a href="#">newest to oldest</a> or technology A-Z</p>
+     </div> 
+     <div class="nhsuk-grid-column-one-half">
+      <p>Download <a href="#">entire list</a> or  <a href="#">filtered view</a> as a CSV file</p>
+    </div>
+  </div>
+
+      {% from 'tables/macro.njk' import table %}
+
+      {{ table({
+        panel: false,
+        caption: "Skin symptoms and possible causes",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Product/service name"
+          },
+          {
+            text: "Company name"
+          },
+          {
+            text: "Date added"
+          },
+          {
+            text: "Status"
+          },
+          {
+            text: "Progress"
+          },
+          {
+            text: "Comments"
+          }
+        ],
+        rows: [
+          [
+            {
+              html: "<a href=\"/htc/innovation-profile\">ChatHealth</a>"
+            },
+            {
+              html: "<a href=\"/htc/company-profile\">ChatHealth</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            },
+            {
+              text: "5/10"
+            },
+            {
+              text: "10"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Droplet</a>"
+            },
+            {
+              html: "<a href=\"#\">Droplet</a>"
+            },
+            {
+              text: "02/06/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            },
+            {
+              text: "5/10"
+            },
+            {
+              text: "7"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Fibricheck</a>"
+            },
+            {
+              html: "<a href=\"#\">Fibricheck</a>"
+            },
+            {
+              text: "27/05/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            },
+            {
+              text: "3/10"
+            },
+            {
+              text: "1"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Joint Pain Advice</a>"
+            },
+            {
+              html: "<a href=\"#\">Joint Pain Advice</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            },
+            {
+              text: "2/10"
+            },
+            {
+              text: "3"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">MediShout</a>"
+            },
+            {
+              html: "<a href=\"#\">MediShout</a>"
+            },
+            {
+              text: "02/06/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag\">Complete</span>"
+            },
+            {
+              text: "9/10"
+            },
+            {
+              text: "14"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">ORCHA</a>"
+            },
+            {
+              html: "<a href=\"#\">ORCHA</a>"
+            },
+            {
+              text: "27/05/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            },
+            {
+              text: "7/10"
+            },
+            {
+              text: "5"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">RespiraSense</a>"
+            },
+            {
+              html: "<a href=\"#\">RespiraSense</a>"
+            },
+            {
+              text: "04/06/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag\">Complete</span>"
+            },
+            {
+              text: "9/10"
+            },
+            {
+              text: "1"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Safe Steps</a>"
+            },
+            {
+              html: "<a href=\"#\">Safe Steps</a>"
+            },
+            {
+              text: "02/06/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            },
+            {
+              text: "7/10"
+            },
+            {
+              text: "4"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Skin Analytics</a>"
+            },
+            {
+              html: "<a href=\"#\">Skin Analytics</a>"
+            },
+            {
+              text: "27/05/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            },
+            {
+              text: "8/10"
+            },
+            {
+              text: "2"
+            }
+          ],
+          [
+            {
+              html: "<a href=\"#\">Virti</a>"
+            },
+            {
+              html: "<a href=\"#\">Virti</a>"
+            },
+            {
+              text: "27/05/2020"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag\">Complete</span>"
+            },
+            {
+              text: "10/10"
+            },
+            {
+              text: "1"
+            }
+          ]
+        ]
+      }) }}
+
+      {% from 'pagination/macro.njk' import pagination %}
+
+      {{ pagination({
+        "previousUrl": "#",
+        "previousPage": "Previous 10 results",
+        "nextUrl": "#",
+        "nextPage": "Next 10 results"
+      }) }}
+
+    </div>  
+
+  </div>
+{% endblock %}

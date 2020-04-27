@@ -1,0 +1,92 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        ChatHealth
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Company profile
+        </span>
+
+      </h1>
+
+      {{ contentsList({
+        items: [
+           {
+            href: "/htc/company-profile",
+            text: "Company details"
+          },
+          {
+            href: "/htc/contact-reports",
+            text: "Contact reports",
+            current: "true"
+          },
+          {
+            href: "/htc/manage-company-profile",
+            text: "Manage profile"
+          }
+        ]
+      }) }}
+
+      <h2>Contact reports</h2>
+
+      <form action="">
+
+        {% from 'textarea/macro.njk' import textarea %}
+
+        {{ textarea({
+          "name": "comment",
+          "id": "comment",
+          "rows": "10",
+          "label": {
+            "text": "Add a contact report"
+          },
+          "hint": {
+            "text": "Your name and organisation will be included with your report."
+          }
+        }) }}
+
+        {{ checkboxes({
+          "idPrefix": "example",
+          "name": "example",
+          "fieldset": {
+   
+          },
+
+          "items": [
+            {
+              "value": "terms-agree",
+              "html": "Make this report visible to assessors outside my organisation"
+            }
+          ]
+        }) }}
+
+        {% from 'button/macro.njk' import button %}
+
+        {{ button({
+          "text": "Add contact report"
+        }) }}
+
+       </form> 
+
+
+    </div>  
+
+  </div>
+{% endblock %}

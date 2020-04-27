@@ -1,0 +1,124 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Introduce new products and services to the NHS
+      </h1>
+
+      <p class="nhsuk-lede-text">
+        Health Connect provides up to date <a href="/htc/innovators">information and guidance</a> for individuals and organisations who want to supply their innovations to the NHS.
+      </p>
+
+      {% from 'action-link/macro.njk' import actionLink %}
+
+      {{ actionLink({
+        "text": "Tell us about your product or service",
+        "href": "/htc/tell-us/start"
+      }) }}
+
+      <p>Use Health Connect to get fast access to organisations that provide support and feedback for your product or service.</p>
+
+      {% from 'details/macro.njk' import details %}
+
+      {{ details({
+        "text": "Which organisations use Health Connect?",
+        "HTML": "
+        <p>The following organisations use Health Connect to identify new products and services for help and support:</p>
+          <ul>
+              <li><a href=\"https://www.ahsnnetwork.com\">Academic Health Science Network</a> (AHSN)</li>
+              <li><a href=\"https://www.gov.uk/government/organisations/department-for-international-trade\">Department for International Trade</a></li>
+              <li><a href=\"http://www.healthcareimprovementscotland.org\">Healthcare Improvement Scotland</a></li>
+              <li><a href=\"https://lshubwales.com\">Life Sciences Hub Wales</a></li>
+              <li><a href=\"https://www.nihr.ac.uk\">National Institute for Health Research</a> (NIHR)</li>
+              <li><a href=\"https://www.nice.org.uk\">National Institute for Health and Care Excellence</a> (NICE)</li>
+              <li><a href=\"https://www.supplychain.nhs.uk\">NHS Supply Chain</a></li>
+          </ul>
+        "
+      }) }}
+      </div>
+    </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <h2>Innovator case studies</h2>
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <a class="nhsuk-promo__link-wrapper" href="#">
+              <div class="nhsuk-promo__content">
+                <h2 class="nhsuk-promo__heading">Healthy.io case study</h2>
+                <p class="nhsuk-promo__description">The Academic Health Science Network is helping Healthy.io to grow, prove the benefits of the product and get further exposure and introductions within the NHS.</p>
+              </div>
+            </a>  
+          </div>
+
+          <div class="nhsuk-grid-column-one-half">
+            <a class="nhsuk-promo__link-wrapper" href="#">
+              <div class="nhsuk-promo__content">
+                <h2 class="nhsuk-promo__heading">Cerebrotech case study</h2>
+                <p class="nhsuk-promo__description">The NIHR Trauma Management MedTech Co-operative has collaborated with Cerebrotech Medical Systems in the evaluation of the Cerebrotech Visor.</p>
+              </div>
+            </a>  
+          </div>
+        </div>
+
+    </div>  
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <hr class="nhsuk-section-break nhsuk-section-break--l nhsuk-section-break--visible">    
+    </div>
+  </div> 
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h3>Frequently asked questions</h3>
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Which products and services are eligible? ",
+        "HTML": "
+        <p>Health Connect is intended for all kinds of innovation any stage of development - from idea, to prototype, to after UK market launch. </p>
+        <p>Products and services that that are likely to offer substantial measurable benefits to patients (or other service users) or the UK health and care system compared to the current UK standard of care will get the most benefit from using Health Connect. For example:</p>
+        <ul>
+          <li>products and services that offer measurable benefits to patients (or other health and care service users) compared to those already offered by current routine practice in the UK</li>
+          <li>products and services that provide measurable benefits to the UK health and care system compared to those already offered by current routine practice in the UK.</li>
+        </ul>
+        <p>Products and services that are likely to offer similar benefits to to patients or the UK health and care system when compared to current UK practice are unlikely to benefit the most from using Health Connect. For example:</p>
+        <ul>
+          <li>product line extensions, unless these are associated with additional measurable benefits</li>
+          <li>iterations of existing products and services, unless these are associated with additional measurable benefits</li>
+        </ul>
+        "
+      }) }} 
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Who will have access to details about my product or service?",
+        "HTML": "
+        <p>A limited number of people working on behalf of an approved Accessor organisation can access Health Connect.</p>
+        <p>Doctors, nurses, and other healthcare professionals will not have access to Health Connect unless they also have a role in one of the approved Accessor Organisations and are registered to use the system as a Data Accessor on behalf of the Accessor Organisation. </p>"
+      }) }} 
+
+    </div>
+
+      <div class="nhsuk-grid-column-one-third">
+
+       </div> 
+
+  </div>   
+{% endblock %}

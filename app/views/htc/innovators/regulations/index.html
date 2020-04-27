@@ -1,0 +1,107 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Guide to regulations - Information for innovators
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/htc",
+      text: "Home"
+    }
+  ],
+  href: "/htc/innovators",
+  text: "Information for innovators" 
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Regulations
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Guides for innovators
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/htc/innovators/regulations",
+            text: "Medicines and medical devices",
+            current: "true"
+          },          
+          {
+            href: "/htc/innovators/regulations/digital",
+            text: "Digital products, services and components"
+          },
+          {
+            href: "/htc/innovators/regulations/surgical",
+            text: "Surgical procedures and techniques"
+          },
+          {
+            href: "/htc/innovators/regulations/other",
+            text: "Models of care and other innovations"
+          }
+        ]
+      }) }}
+
+<p>Medicines and medical devices are regulated by the Medicines and Healthcare products Regulatory Agency (MHRA). MHRA plays a leading role in protecting and improving public health and supports innovation through scientific research and development.</p>
+<h3>Definition of medicines</h3>
+<p>As defined in the <a href="http://www.legislation.gov.uk/uksi/2012/1916/made">Human Medicines Regulations 2012</a>, a ‘medicinal product’ means:</p>
+<p>(a) any substance or combination of substances presented as having properties of preventing or treating disease in human beings; or</p>
+<p>(b) any substance or combination of substances that may be used by or administered to human beings with a view to—</p>
+<p>(i) restoring, correcting or modifying a physiological function by exerting a pharmacological, immunological or metabolic action, or</p>
+<p>(ii) making a medical diagnosis.</p>
+<p>MHRA don’t advise that products are medicines and something else – when MHRA are classifying products they look at the composition of the product, the mode of action and the proposed use of the product. It is sometimes complex but MHRA are expected to reach an ‘either or’ decision as this is how they determine what regulations apply.</p>
+
+<h2>Clinical trials</h2>
+<p>The first step in developing most medicinal products is to <a href="https://www.gov.uk/guidance/clinical-trials-for-medicines-apply-for-authorisation-in-the-uk">conduct the necessary clinical trials</a>.</p>
+<p>During the conduct of clinical trials, the followiong <a href="https://www.gov.uk/guidance/clinical-trials-for-medicines-manage-your-authorisation-report-safety-issues">requirements must be met</a> to protect trial participants and to ensure that the relevant information is collected.</p>
+
+  
+<h3>Marketing Authorisation</h3>
+<p>The information obtained in clinical trials is used to support a Marketing Authorisation Application. A Marketing Authorisation must be obtained by anyone intending to market a medicinal product in the UK. Details about the types of procedures that can be used to obtain a Marketing Authorisation Application can be found on the following page of the MHRA website: https://www.gov.uk/guidance/apply-for-a-licence-to-market-a-medicine-in-the-uk this information is likely to be updated at the end of the Brexit implementation period and should be monitored regularly.</p>
+<p>In some cases, no clinical trial may be needed, for instance in the case of a so-called ‘piggy-back’ application. Likewise, the clinical trial data needed to support a so-called ‘generic’ version of a medicinal product that has been used for many years is less extensive than that required to support a new compound that has never been used in human before. To review the requirements that apply to Marketing Authorisation Applications submitted under the different legal bases (such as ‘piggy-back’, ‘generic’ and others) refer to the link in the paragraph above. </p>
+<p>Innovators should engage with the MHRA at all stages of medicines development including early stage research, prior to human exposure, during clinical development but not approved and those ready for MA submission.</p>
+
+<h2>Medical devices</h2>
+<h3>Conformity assessments</h3>
+<p>Manufacturers need to demonstrate that their device meets the requirements in the MDR or IVDR by carrying out a conformity assessment. The conformity assessment route depends on the classification of the device (and the risk class determines whether or not a conformity assessment is required).</p>
+<p>A notified body will need to undertake a conformity assessment for all class IIa, IIb and III medical devices and class B, C and D in vitro diagnostic devices . This includes the review of clinical and scientific data, manufacturing processes and the quality management system. but the specific requirements and assessments process varies by class.</p>
+<p>Manufacturers can certify their products with any notified body in the EU. The MHRA retains an up to date list of notified bodies for MedTech.</p>
+<p>Conformity assessments will involve: a review of clinical and scientific data, manufacturing processes and the quality management system; however the specific requirements and assessments process varies by class. These can be undertaken by a European notified body (you can choose to be assessed by a notified body in any European country); in the UK details can be found.</p>
+<p>Manufacturers will be issued with a CE certificate which can be placed on their product to show that it has passed the conformity assessment.</p>
+
+<h2>In vitro diagnostics</h2>
+
+<h3>Is my product a medicine or a medical device?</h3>
+<p>Some products are hard to distinguish from a medicine or a medical device, such as cosmetics, food supplements, herbal products, biocides, machinery/laboratory equipment. These products are called <a href="https://www.gov.uk/guidance/decide-if-your-product-is-a-medicine-or-a-medical-device#borderline-medicines">borderline products</a> until their status has been decided.  </p>
+<p>The MHRA provides additional guidance and <a href="https://info.mhra.gov.uk/forms/borderline_advice.aspx">an enquiry form</a> that can be submitted to the MHRA Borderline Team. </p>
+
+
+<h2>Support for navigating medicines and medical device regulations</h2>
+<p>The MHRA Innovation Office provides a single point of access to free expert, confidential, regulatory information, advice and guidance. </p>
+<p>This service helps to make regulatory information clear and accessible to those who are developing innovative medicines, medical devices or novel manufacturing processes - particularly those that challenge the current regulatory framework. </p>
+<p>The aim is to encourage novel approaches (e.g. clinical trial designs or manufacturing methods as well as novel medicines). MHRA can offer advice throughout the product life cycle; however, MHRA encourage early engagement and offer advice on pre-clinical and clinical development.</p>
+<p>At a later stage of medicines development, the MHRA also offers fee paid national scientific. This includes product-specific scientific advice, broader scope scientific advice and MHRA-NICE joint scientific advice which provides an opportunity to get advice about designing trials that meet both MHRA and Human Tissue Authority requirements.</p>
+<p>The next stages in the regulatory pathway would be a clinical trial authorisation and demonstration of good clinical practice for clinical trials. Followed by demonstration of Good Manufacturing Practice (GMP) in medicines production processes.</p>
+<p>Medicines developers can apply to the Early Access to Medicines (EAMs) to give patients with life threatening or seriously debilitating conditions access to medicines that do not yet have a marketing authorisation when there is a clear unmet medical need.</p>
+<p>The final stage of the regulatory pathway is to support authorisation to market and maintenance of the licenced product through the product life cycle.</p>
+
+ {% from 'pagination/macro.njk' import pagination %}
+
+{{ pagination({
+
+  "nextUrl": "/htc/innovators/regulations/digital",
+  "nextPage": "Digital products, services and components"
+}) }}   
+    </div>  
+
+  </div>
+{% endblock %}

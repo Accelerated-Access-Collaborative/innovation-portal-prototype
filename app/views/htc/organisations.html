@@ -1,0 +1,48 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Information for organisations 
+      </h1>
+
+      <h2>Accessing the data in Health Connect</h2>
+      <p>Organisations that meet the criteria below may apply for access to the data in Health Connect. The application will be reviewed and a decision made by the Health Connect oversight and governance board.</p>
+
+    <p>Organisations must be publicly funded and operate on a national level with a legitimate and clearly stated purpose for:</p>
+    <ol>
+        <li>providing health and social care systems (or part of health and social care systems) who are requiring information on Health Technologies, which are available on a national level for the purpose of developing guidance, advice and policies, OR</li>
+        <li>commissioning or procuring health technologies, OR</li>
+        <li>supporting development or adoption of Health Technologies,</li>
+     </ol>     
+   
+   <p>Organisations must also:</p>
+   <ol>
+        <li>be committed to actively engaging with the Health Connect system and participate in agreed collaborative and engagement processes as required by NHSE and/or the Health Connect Team from time to time;</li>
+        <li>be able to demonstrate relevant expertise within the Accessor Organisation and/or Data Accessor team relevant to the specific purpose for using Health Connect;</li>
+        <li>have skills and ability to incorporate information into a fair, accurate and balanced way;</li>
+        <li>have policies and processes in place for handling Confidential Information.</li>
+    </ol>
+
+
+
+    </div>  
+
+  </div>
+{% endblock %}

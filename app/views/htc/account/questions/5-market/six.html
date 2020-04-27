@@ -1,0 +1,129 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  Market understanding  - Add a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Market understanding
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Section 6 of 13
+        </span>
+      </h1>
+
+      <form action="/htc/profile-stage-six" method="post">
+
+        {% call fieldset({
+        legend: {
+          "text": "Have you undertaken structured market research?",
+          "classes": "nhsuk-fieldset__legend--m",
+          "isPageHeading": true
+        }
+        }) %}
+
+
+        {{ radios({
+          "idPrefix": "market-research",
+          "name": "market-research",
+          "items": [
+        {
+          "value": "yes",
+          "text": "Yes",
+          "hint": {
+            "text": "We will ask you to provide further details about this"
+          }
+        },
+        {
+          "value": "No",
+          "text": "No"
+        }
+      ]
+      }) }}
+      {% endcall %}
+
+      {% call fieldset({
+        legend: {
+          "text": "Does your product or service involve intellectual property?",
+          "classes": "nhsuk-fieldset__legend--m",
+          "isPageHeading": true
+        }
+        }) %}
+
+
+        {{ radios({
+          "idPrefix": "intellectual-property",
+          "name": "intellectual-property",
+          "items": [
+        {
+          "value": "yes",
+          "text": "Yes",
+          "hint": {
+            "text": "We will ask you to provide further details about this"
+          }
+        },
+        {
+          "value": "No",
+          "text": "No"
+        }
+      ]
+      }) }}
+      {% endcall %}
+
+      {% call fieldset({
+        legend: {
+          "text": "Do you have freedom to operate?",
+          "classes": "nhsuk-fieldset__legend--m",
+          "isPageHeading": true
+        }
+        }) %}
+
+        {{ details({
+          "text": "What does freedom to operate mean?",
+          "HTML": "
+          <p>Overview...</p>
+          <ul>
+            <li>Details...</li>
+          </ul>
+            "
+        }) }}
+
+        {{ radios({
+          "idPrefix": "operating-freedom",
+          "name": "operating-freedom",
+          "items": [
+        {
+          "value": "yes",
+          "text": "Yes"
+        },
+        {
+          "value": "No",
+          "text": "No"
+        }
+      ]
+      }) }}
+      {% endcall %}      
+
+
+      {{ button({
+        "text": "Continue"
+      }) }}
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

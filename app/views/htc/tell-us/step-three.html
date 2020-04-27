@@ -1,0 +1,77 @@
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Testing - Tell us about your product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/htc/tell-us/start",
+  text: "Tell us about your product or service" 
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/htc/tell-us/step-three" method="post">
+
+        {% call fieldset({
+          legend: {
+            "text": "Have you tested your product or service with users?",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+          }) %}
+
+          {{ details({
+          "text": "What kind of testing is expected?",
+          "HTML": "
+          <p>It is important to demonstrate that your product or service addresses a genuine need for the intended users.</p>
+            <p>You can learn more about this by:</p>
+            <ul>
+              <li>Understand users and their needs in the context of health and care </li>
+              <li>Making prototypes to explore, share and test different designs</li>
+              <li>Developing a research study or pilot</li>
+            </ul>
+           <p>The National Institute for Health Research can provide advice on support on how to <a href=\"https://www.nihr.ac.uk/explore-nihr/support/research-design-service.htm\">design research</a> for new products and services.</p>
+            "
+        }) }}
+
+          {{ radios({
+            "idPrefix": "user-tested",
+            "name": "user-tested",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+        }) }}
+        {% endcall %}
+
+        
+
+
+        {{ button({
+          "text": "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

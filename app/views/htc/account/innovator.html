@@ -1,0 +1,74 @@
+
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-width-container">
+
+      <h1>
+        Your technologies
+      </h1>
+
+      {% from 'tables/macro.njk' import table %}
+
+      {{ table({
+        panel: false,
+        caption: "Skin symptoms and possible causes",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "Name"
+          },
+          {
+            text: "Views"
+          },
+          {
+            text: "Comments"
+          },
+          {
+            text: "Population"
+          }
+          ,
+          {
+            text: "Registration status"
+          }
+        ],
+        rows: [
+          [
+            {
+              html: "<a href=\"/htc/innovation-profile\">ChatHealth</a>"
+            },
+            {
+              text: "0"
+            },
+            {
+              text: "0"
+            },
+            {
+              text: "Elderly"
+            },
+            {
+              html: "<span class=\"nhsuk-tag nhsuk-tag--dark-grey\">In progress</span>"
+            }
+          ]
+        ]
+      }) }}
+
+
+    </div>  
+
+  </div>
+{% endblock %}

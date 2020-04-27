@@ -1,0 +1,119 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        ChatHealth
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Innovation profile
+        </span>
+        <span class="nhsuk-tag nhsuk-tag--dark-grey">In progress</span>
+
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/htc/innovation-profile",
+            text: "Innovation details"
+          },
+          {
+            href: "/htc/assessor-comments",
+            text: "Assessor comments"
+          },
+          {
+            href: "/htc/manage-profile",
+            text: "Manage profile",
+            current: "true"
+          }
+        ]
+      }) }}
+
+      <h2>Manage profile</h2>
+
+      <form action="">
+
+        {% from 'input/macro.njk' import input %}
+
+        {{ input({
+          "label": {
+            "text": "Add additional tags to this profile"
+          },
+            "hint": {
+            "text": "Please seperate tags with a comma. Example: 'chatbot, doctor'."
+          },
+          "id": "example-with-hint-text",
+          "name": "example-with-hint-text"
+        }) }}
+
+        {% from 'radios/macro.njk' import radios %}
+        {% from 'fieldset/macro.njk' import fieldset %}
+        {% from 'hint/macro.njk' import hint %}
+
+        {% call fieldset({
+          legend: {
+            "text": "Portfolio classification",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+          }) %}
+          {{ hint({
+            "text": "Include this innovation in a predefined portfolio for reporting",
+            "classes": "nhsuk-u-margin-bottom-2"
+          }) }}
+ 
+          {{ radios({
+            "idPrefix": "example-hints",
+            "name": "example-hints",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Developing"
+          },
+          {
+            "value": "no",
+            "text": "Delivering"
+          },
+          {
+            "value": "not sure",
+            "text": "Deploying"
+          },
+    {
+      "divider": "or"
+    },
+    {
+      "value": "create-account",
+      "text": "Do not include in a portfolio"
+    }
+        ]
+        }) }}
+        {% endcall %}
+
+        {% from 'button/macro.njk' import button %}
+
+        {{ button({
+          "text": "Update profile"
+        }) }}
+
+       </form> 
+
+    </div>  
+
+  </div>
+{% endblock %}

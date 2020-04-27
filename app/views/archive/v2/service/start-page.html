@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Profile a product or service
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Find a partner for your product or service
+      </h1>
+
+      <p>
+        Use this service to:
+      </p>
+
+      <ul>
+        <li>
+          create a simple profile of your product or service
+        </li>
+        <li>
+          understand how your product or service will be assessed
+        </li>
+        <li>
+          get advice on partners who can support you with next steps
+        </li>
+      </ul>
+
+      <a href="/service/step-one" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Start now
+      </a>
+
+
+
+    </div>
+  </div>
+{% endblock %}

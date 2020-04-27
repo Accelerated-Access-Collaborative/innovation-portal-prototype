@@ -1,0 +1,94 @@
+<!-- 
+  This is the main layout where you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Extends the layout from /docs/views/template.html -->
+{% extends "template.html" %}
+
+<!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+{% endblock %}
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Header goes inside the header block -->
+<!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
+{% block header %}
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "false",
+    "organisation": {
+      "name": "Health Connect",
+      "descriptor": "Accelerated Access Collaborative"
+    },
+    "primaryLinks": [
+      {
+        "url"  : "/htc/assessor",
+        "label" : "Innovations and activity"
+      },
+      {
+        'url' : '/htc/companies',
+        'label' : 'Companies and contacts'
+      },
+      {
+        'url'  : '/htc/reports',
+        'label' : 'Pathway reports'
+      },
+      {
+        'url'  : '/htc/assessor-profile',
+        'label' : 'Your assessor profile'
+      },
+      {
+        'url' : '/htc/logout',
+        'label' : 'Logout'
+      }
+    ]
+  })
+}}
+{% endblock %}
+
+<!-- Footer goes inside the footer block -->
+<!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/htc",
+        "label": "Home"
+      },
+      {
+        "URL": "/htc",
+        "label": "Terms and conditions"
+      },
+      {
+        "URL": "/htc",
+        "label": "Accessibility"
+      },
+      {
+        "URL": "/htc",
+        "label": "Contact"
+      },
+      {
+        "URL": "/htc",
+        "label": "FAQs"
+      }
+    ]
+  })}}
+{% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    <!-- Custom JavaScript files can be added to this file -->
+    {% include "includes/scripts.html" %}
+    <!-- For adding page specific JavsScript -->
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+{% endblock %}

@@ -1,0 +1,43 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Tell us about your product or service
+      </h1>
+
+      <p>Use this service to describe:</p>
+
+      <ul>
+        <li>the idea or innovation behind your product or service</li>
+        <Li>the needs your product or service addresses</Li>
+        <li>the benefits your product or service brings</li>
+      </ul>
+
+      <p>The basic registration process takes around 5min.</p>
+
+      <a href="/htc/tell-us/step-one" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Start now
+      </a>
+
+
+    </div>  
+
+  </div>
+{% endblock %}

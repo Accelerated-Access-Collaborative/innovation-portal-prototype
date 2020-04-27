@@ -1,0 +1,41 @@
+
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Confirm your email address
+      </h1>
+
+      {{ insetText({
+        "HTML": "<p>Your account has been created. Please check your email for a confirmation link.</p>"
+      }) }}
+
+
+      {% from 'inset-text/macro.njk' import insetText %}
+
+
+            {% from 'action-link/macro.njk' import actionLink %}
+        {{ actionLink({
+          "text": "Continue",
+          "href": "/htc/account/innovator-continue"
+        }) }}
+
+    </div>  
+
+  </div>
+{% endblock %}

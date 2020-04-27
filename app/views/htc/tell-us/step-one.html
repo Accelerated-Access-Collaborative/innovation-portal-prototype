@@ -1,0 +1,86 @@
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  Category - Tell us about your product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/htc/tell-us/start",
+  text: "Tell us about your product or service" 
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/htc/tell-us/step-one" method="post">
+
+        {{ checkboxes({
+        "idPrefix": "example",
+        "name": "example",
+        "fieldset": {
+          "legend": {
+            "text": "What category best describes your product or service?",
+            "classes": "nhsuk-fieldset__legend--l",
+            isPageHeading: true
+          }
+        },
+        "hint": {
+          "text": "Select all options that are relevant to you."
+        },
+        "items": [
+          {
+            "value": "pharma",
+            "text": "Pharmaceutical",            
+            "hint": {
+                "text": "Pharmaceutical includes all drug-based products and vaccinations."
+              }
+          },
+          {
+            "value": "med-tech",
+            "text": "Diagnostic device",
+            "hint": {
+                "text": "Diagnostic device includes healthcare products used to diagnose, monitor or treat diseases or medical conditions."
+              }
+          },
+          {
+            "value": "med-tech",
+            "text": "Medical technology for treatment"
+          },
+          {
+            "value": "platform",
+            "text": "Digital health platform, mobile app or cloud service",
+            "hint": {
+                "text": "Digital health considers medical products such as apps and data analytics which could be sold to the NHS."
+              }
+          },
+          {
+            "value": "framework",
+            "text": "Care pathway, model of care or framework",
+            "hint": {
+                "text": ""
+              }
+          }
+
+        ]
+      }) }}
+
+      {{ button({
+        "text": "Continue"
+      }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

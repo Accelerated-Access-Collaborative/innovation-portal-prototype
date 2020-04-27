@@ -1,0 +1,73 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-width-container">
+
+      <h1>
+        Assessor profile
+      </h1>
+
+            {{ contentsList({
+        items: [
+          {
+            href: "/htc/assessor-profile",
+            text: "Your details",
+            current: "true"
+          },
+          {
+            href: "/htc/manage-assessor-profile",
+            text: "Manage profile"
+          }
+        ]
+      }) }}
+
+<h2>Your details</h2>
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "Innes Veshun"
+            }
+          },
+          {
+            key: {
+              text: "Role"
+            },
+            value: {
+              text: "Commercial Director"
+            }
+          },
+          {
+            key: {
+              text: "Organisation"
+            },
+            value: {
+              text: "North East and North Cumbria AHSN"
+            }
+          }
+        ]
+      }) }}
+
+    </div>  
+
+  </div>
+{% endblock %}

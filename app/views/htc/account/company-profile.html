@@ -1,0 +1,81 @@
+
+{% extends 'htc-layout-assessor.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        ChatHealth
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+          Company profile
+        </span>
+      </h1>
+
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/htc/company-profile",
+            text: "Company details",
+            current: "true"
+          },
+          {
+            href: "/htc/contact-reports",
+            text: "Contact reports"
+          },
+          {
+            href: "/htc/manage-company-profile",
+            text: "Manage profile"
+          }
+        ]
+      }) }}
+
+      <h2>Company details</h2>
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Website"
+            },
+            value: {
+              text: "https://www.healthforteens.co.uk/health/about-chathealth/"
+            }
+          },
+          {
+            key: {
+              text: "Address"
+            },
+            value: {
+              text: "Leicestershire Partnership NHS Trust"
+            }
+          },
+          {
+            key: {
+              text: "Contact"
+            },
+            value: {
+              html: "Chris Harris"
+            }
+          }
+        ]
+      }) }}
+
+    </div>  
+
+  </div>
+{% endblock %}

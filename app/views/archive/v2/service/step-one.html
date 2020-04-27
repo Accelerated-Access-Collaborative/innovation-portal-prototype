@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Product or service type - Profile a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ],
+  href: "/service/start-page",
+  text: "Find a partner for your product or service" 
+}) }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/service/step-one" method="post">
+
+        {% call fieldset({
+          legend: {
+            "text": "What category best describes your product or service?",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+          }) %}
+          {{ hint({
+            "text": "Please choose an option that best describes your product or service.",
+            "classes": "nhsuk-u-margin-bottom-2"
+          }) }}
+
+          {{ radios({
+            "idPrefix": "innovation-category",
+            "name": "innovation-category",
+            "items": [
+          {
+            "value": "pharma",
+            "text": "Pharmaceutical",
+            checked: checked("innovation-category", "Pharmaceutical"),
+            "hint": {
+                "text": "Pharmaceutical includes all drug-based products and vaccinations."
+              }
+          },
+          {
+            "value": "med-tech",
+            "text": "Medical technology",
+            "hint": {
+                "text": "Medical technology includes healthcare products used to diagnose, monitor or treat diseases or medical conditions."
+              }
+          },
+          {
+            "value": "digi-health",
+            "text": "Digital health",
+            "hint": {
+                "text": "Digital health considers medical products such as apps and data analytics which could be sold to the NHS."
+              }
+          },
+          {
+            "value": "non-clinical",
+            "text": "Non-clinical product or service",
+            "hint": {
+                "text": "Products or services that are not health-related or intended for clinical use but may be used by healthcare organisations."
+              }
+          },
+          {
+              "divider": "or"
+            },
+          {
+            "value": "idea-only",
+            "text": "I don't have a product or service yet",
+            "hint": {
+                "text": "Choose this option if you are still developing an idea."
+              }
+          }
+        ]
+        }) }}
+        {% endcall %}
+
+
+        {{ button({
+          "text": "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

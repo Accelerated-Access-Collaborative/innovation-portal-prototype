@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Regulation - Main page
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Home"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Impact of Brexit on regulatory compliance
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Comply with regulations
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/regulation",
+            text: "Medical device regulations"
+          },
+          {
+            href: "/regulation/page-two",
+            text: "Impact of Brexit on regulatory compliance",
+            current: "true"
+          },
+          {
+            href: "/regulation/page-three",
+            text: "Getting your product to market"
+          }
+        ]
+      }) }}
+
+      <h2>Post-Brexit regulatory alignment</h2>
+      <p>
+        Pellentesque ornare pellentesque dolor, non elementum augue finibus ut. Suspendisse sit amet diam consectetur, hendrerit risus nec, tristique risus. Etiam euismod nibh quis massa ornare consequat.
+      </p>
+
+      <h2>Guidance on the regulation of medicines, medical devices and clinical trials</h2>
+      <p>
+        Integer sed placerat libero. Praesent sit amet nisi at erat tempor tincidunt sed quis elit. Ut eget turpis id eros lacinia euismod a at tortor. Cras sit amet fermentum orci, quis hendrerit turpis. Nunc aliquet, elit bibendum volutpat viverra, arcu tellus imperdiet massa, eget sollicitudin justo odio et arcu. 
+      </p>
+
+
+      <h2>Other sources of information</h2>
+      <p>
+        Praesent at mollis ipsum, eget pretium erat. Donec vel semper risus. Duis vestibulum, ante at lacinia ullamcorper, arcu mi ultrices mi, a varius libero augue sit amet urna. 
+      </p>
+
+
+      {{ pagination({
+        "previousUrl": "/regulation",
+        "previousPage": "Medical device regulations",
+        "nextUrl": "/regulation/page-three",
+        "nextPage": "Getting your product to market"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
