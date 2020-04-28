@@ -1,7 +1,7 @@
 {% extends 'htc-layout-innovator.html' %}
 
 {% block pageTitle %}
-  Alternatives  - Add a product or service
+    Product or service - Add a product or service
 {% endblock %}
 
 
@@ -16,59 +16,56 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-
-      <h1>
-        Alternatives available
+    <h1>About the idea or innovation
         <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
           Section 1 of 6
         </span>
       </h1>
 
+
       <form action="/htc/account/questions/1-product/four" method="post">
 
-        {% call fieldset({
-        legend: {
-          "text": "Are you aware of any alternatives to your product or service?",
-          "classes": "nhsuk-fieldset__legend--m",
-          "isPageHeading": true
-        }
-        }) %}
-
-
-        {{ radios({
-          "idPrefix": "alternative-aware",
-          "name": "alternative-aware",
-          "items": [
-        {
-          "value": "yes",
-          "text": "Yes"
-        },
-        {
-          "value": "No",
-          "text": "No"
-        }
-      ]
-      }) }}
-      {% endcall %}
-
-      {% from 'textarea/macro.njk' import textarea %}
-
-        {{ textarea({
-          "name": "example",
-          "id": "example",
-          "label": {
-            "text": "Please describe any alternatives you are aware of",
-            "classes": "nhsuk-fieldset__legend--m"
-          },
-          "hint": {
-            "text": "If you answered yes, please provide a short description"
+    
+     {{ checkboxes({
+        "idPrefix": "product-technologies",
+        "name": "product-technologies",
+        "fieldset": {
+          "legend": {
+            "text": "Which of these categories apply to your product or service?",
+            "classes": "nhsuk-fieldset__legend--m",
+            isPageHeading: true
           }
-        }) }}
-
-      {{ button({
-        "text": "Continue"
+        },
+        "hint": {
+          "text": "Select all options that are relevant to you."
+        },
+        "items": [
+          {
+            "value": "pharma",
+            "text": "Pharmaceutical"
+          },
+          {
+            "value": "med-tech",
+            "text": "Diagnostic device"
+          },
+          {
+            "value": "med-tech",
+            "text": "Medical technology for treatment"
+          },
+          {
+            "value": "platform",
+            "text": "Digital health platform, mobile app or cloud service"
+          },
+          {
+            "value": "machine-learning",
+            "text": "Machine learning with fixed or adaptive algorithm"
+          }
+        ]
       }) }}
 
+      <a href="/htc/account/questions/1-product/five" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
 
       </form>
 

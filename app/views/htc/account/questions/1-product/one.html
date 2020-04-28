@@ -16,35 +16,40 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h1>
-        Product or service name
+      <h1>About the idea or innovation
         <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
           Section 1 of 6
         </span>
       </h1>
+        <form action="/htc/account/questions/1-product/one" method="post">
 
-      <form action="/htc/technology" method="post">
-
-        {% from 'input/macro.njk' import input %}
-
-        {{ input({
-          "label": {
-            "text": "What is the name of your product or service?",
-            "classes": "nhsuk-label--l",
+          {% call fieldset({
+          legend: {
+            "text": "Do you have a working product, service or prototype?",
+            "classes": "nhsuk-fieldset__legend--m",
             "isPageHeading": true
+          }
+          }) %}
+  
+          {{ radios({
+            "idPrefix": "working-product",
+            "name": "working-product",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
           },
-            "hint": {
-            "text": "The name or working title of your product or service"
-          },
-          "id": "tech-name",
-          "name": "tech-name",
-          "classes": "nhsuk-u-width-three-quarters"
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
         }) }}
+        {% endcall %}
 
-
-      <a href="/htc/account/questions/1-product/two" class="nhsuk-button nhsuk-u-margin-bottom-8">
-        Continue
-      </a>
+      {{ button({
+        "text": "Continue"
+      }) }}
 
       </form>
 

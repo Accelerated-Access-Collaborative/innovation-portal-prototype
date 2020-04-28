@@ -1,0 +1,83 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  Product or service purpose - Add a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>About the idea or innovation
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Section 1 of 6
+        </span>
+      </h1>
+
+      <form action="/htc/account/questions/1-product/seven" method="post">
+
+      {% from 'checkboxes/macro.njk' import checkboxes %}
+      
+          {{ checkboxes({
+            "idPrefix": "example",
+            "name": "example",
+            "fieldset": {
+              "legend": {
+                "text": "Is there any particular support you are looking for?",
+                "classes": "nhsuk-fieldset__legend--l",
+                isPageHeading: true
+              }
+            },
+            "hint": {
+              "text": "choose up to 2"
+            },
+            "items": [
+              {
+                "value": 1,
+                "text": "Clinical input to product development"
+              },
+              {
+                "value": 2,
+                "text": "Intellectual property"
+              },
+              {
+                "value": 3,
+                "text": "Clinical evaluation (including access to clinical trials)"
+              },
+              {
+                "value": 4,
+                "text": "Funding for a trial"
+              },
+              {
+                "value": 5,
+                "text": "General information on funding"
+              },
+              {
+                "value": 6,
+                "text": "Help with regulatory approval"
+              },
+              {
+                "value": 7,
+                "text": "Discussions with NHS organisations to support adoption"
+              },
+              {
+                "value": 8,
+                "text": "Funding to develop prototype"
+              }
+          ]
+      }) }}
+
+      <a href="/htc/account/questions/2-clinical-needs/one" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
+      </form>
+    </div>
+  </div>
+{% endblock %}

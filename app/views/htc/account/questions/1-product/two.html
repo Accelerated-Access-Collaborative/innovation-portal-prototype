@@ -1,7 +1,7 @@
 {% extends 'htc-layout-innovator.html' %}
 
 {% block pageTitle %}
-    Product or service - Add a product or service
+  Product or service type - Profile a product or service
 {% endblock %}
 
 
@@ -17,81 +17,34 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1>
-        Product or service type
+        About the idea or innovation
         <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
           Section 1 of 6
         </span>
       </h1>
 
-
       <form action="/htc/account/questions/1-product/two" method="post">
 
-        {% call fieldset({
-        legend: {
-          "text": "Is your product or service clinical or non-clinical?",
-          "classes": "nhsuk-fieldset__legend--m",
-          "isPageHeading": true
-        }
-        }) %}
+        {% from 'input/macro.njk' import input %}
 
-
-        {{ radios({
-          "idPrefix": "clinical-product",
-          "name": "clinical-product",
-          "items": [
-        {
-          "value": "yes",
-          "text": "Clinical"
-        },
-        {
-          "value": "no",
-          "text": "Non-clinical"
-        }
-      ]
-      }) }}
-      {% endcall %}
-
-              {{ checkboxes({
-        "idPrefix": "product-technologies",
-        "name": "product-technologies",
-        "fieldset": {
-          "legend": {
-            "text": "Which technologies does your product or service use?",
-            "classes": "nhsuk-fieldset__legend--m",
-            isPageHeading: true
-          }
-        },
-        "hint": {
-          "text": "Select all options that are relevant to you."
-        },
-        "items": [
-          {
-            "value": "pharma",
-            "text": "Pharmaceutical"
+        {{ input({
+          "label": {
+            "text": "What is the name of your product, service or prototype?",
+            "classes": "nhsuk-label--l",
+            "isPageHeading": true
           },
-          {
-            "value": "med-tech",
-            "text": "Diagnostic device"
+            "hint": {
+            "text": "The name or working title of your product, service or prototype"
           },
-          {
-            "value": "med-tech",
-            "text": "Medical technology for treatment"
-          },
-          {
-            "value": "platform",
-            "text": "Digital health platform, mobile app or cloud service"
-          },
-          {
-            "value": "machine-learning",
-            "text": "Machine learning with fixed or adaptive algorithm"
-          }
-        ]
-      }) }}
+          "id": "tech-name",
+          "name": "tech-name",
+          "classes": "nhsuk-u-width-three-quarters"
+        }) }}
 
-      {{ button({
-        "text": "Continue"
-      }) }}
 
+      <a href="/htc/account/questions/1-product/three" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
 
       </form>
 

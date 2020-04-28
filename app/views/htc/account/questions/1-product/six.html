@@ -1,0 +1,48 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  Product or service purpose - Add a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>About the idea or innovation
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          Section 1 of 6
+        </span>
+      </h1>
+
+      <form action="/htc/account/questions/1-product/six" method="post">
+
+        {% from 'textarea/macro.njk' import textarea %}
+
+        {{ textarea({
+          "name": "example",
+          "id": "example",
+          "label": {
+            "text": "What problem does your product or service solve?",
+            "classes": "nhsuk-fieldset__legend--m"
+          },
+          "hint": {
+            "text": "Please provide a short description (free text 100 words)"
+          }
+        }) }}
+
+        <a href="/htc/account/questions/1-product/seven" class="nhsuk-button nhsuk-u-margin-bottom-8">
+          Continue
+        </a>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

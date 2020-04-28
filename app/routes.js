@@ -220,10 +220,15 @@ router.post('/htc/account/questions/3-benefits/one', function (req, res) {
 
 })
 
-
-
-
-
-
+// Working Product
+router.post('/htc/account/questions/1-product/one', function (req, res) {
+  var workingProduct = req.session.data['working-product']
+  if (workingProduct == "yes"){
+    res.redirect('/htc/account/questions/1-product/two')
+  }
+  else {
+    res.redirect('/htc/account/questions/1-product/three')
+  }
+})
 
 module.exports = router;

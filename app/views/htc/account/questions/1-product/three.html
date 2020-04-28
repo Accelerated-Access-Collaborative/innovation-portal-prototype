@@ -1,7 +1,7 @@
 {% extends 'htc-layout-innovator.html' %}
 
 {% block pageTitle %}
-  Product or service purpose - Add a product or service
+    Product or service - Add a product or service
 {% endblock %}
 
 
@@ -12,69 +12,48 @@
   }) }}
 {% endblock %}
 
+
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <h1>
-        Product or service purpose
+      <h1>About the idea or innovation
         <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
           Section 1 of 6
         </span>
       </h1>
 
+
       <form action="/htc/account/questions/1-product/three" method="post">
 
         {% call fieldset({
         legend: {
-          "text": "What is the main purpose of your product or service?",
+          "text": "What category best describes your idea or innovation?",
           "classes": "nhsuk-fieldset__legend--m",
-          "isPageHeading": false
+          "isPageHeading": true
         }
         }) %}
 
 
         {{ radios({
-          "idPrefix": "product-purpose",
-          "name": "product-purpose",
+          "idPrefix": "clinical-product",
+          "name": "clinical-product",
           "items": [
         {
-          "value": "prevent",
-          "text": "Preventing a condition from happening or worsening"
+          "value": "yes",
+          "text": "Clinical"
         },
         {
-          "value": "diagnose",
-          "text": "Diagnosing, assessing or monitoring a condition treatment or therapy"
-        },
-        {
-          "value": "provide",
-          "text": "Providing a treatment or therapy"
-        },
-        {
-          "value": "provide",
-          "text": "Enabling care, services or communcation"
+          "value": "no",
+          "text": "Non-clinical"
         }
       ]
       }) }}
       {% endcall %}
 
 
-      {% from 'textarea/macro.njk' import textarea %}
-
-        {{ textarea({
-          "name": "example",
-          "id": "example",
-          "label": {
-            "text": "What problem does your product or service solve?",
-            "classes": "nhsuk-fieldset__legend--m"
-          },
-          "hint": {
-            "text": "Please provide a short description"
-          }
-        }) }}
-
-      {{ button({
-        "text": "Continue"
-      }) }}
+      <a href="/htc/account/questions/1-product/four" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
 
 
       </form>
