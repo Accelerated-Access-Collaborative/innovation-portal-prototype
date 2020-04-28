@@ -1,0 +1,57 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+Product or service type - Profile a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Detailed understanding of needs (clinical)
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+        Section 2 of 6
+      </span>
+    </h1>
+    <form action="/htc/account/questions/2-clinical-needs/one" method="post">
+
+      {% call fieldset({
+          legend: {
+            "text": "Do you know yet what population / subgroup your product / service will affect?",
+            "classes": "nhsuk-fieldset__legend--m",
+            "isPageHeading": true
+          }
+          }) %}
+
+      {{ radios({
+            "idPrefix": "knowledge-about-population",
+            "name": "knowledge-about-population",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+        }) }}
+      {% endcall %}
+  
+      <a href="/htc/account/questions/2-clinical-needs/two" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
+    </form>
+
+  </div>
+</div>
+{% endblock %}
