@@ -1,0 +1,47 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+Product or service type - Profile a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>The benefits (clinical)
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+        Section 4 of 6
+      </span>
+    </h1>
+    <form action="/htc/account/questions/4-clinical-benefits/three" method="post">
+     
+      {% from 'textarea/macro.njk' import textarea %}
+
+      {{ textarea({
+        "name": "example",
+        "id": "example",
+        "label": {
+          "text": "Please describe the benefits to patients / citizens [for each population] and how.",
+          "classes": "nhsuk-fieldset__legend--l"
+        },
+        "hint": {
+          "text": "Free text - 100 words"
+        }
+      }) }}
+  
+      <a href="/htc/account/questions/4-clinical-benefits/four" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
+    </form>
+
+  </div>
+</div>
+{% endblock %}
