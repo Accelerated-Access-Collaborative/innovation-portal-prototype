@@ -16,44 +16,53 @@ Product or service type - Profile a product or service
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>The benefits (clinical)
+    <h1>Evidence of the benefits
       <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
-        Section 4 of 6
+        Section 5 of 6
       </span>
     </h1>
-    <form action="/htc/account/questions/4-clinical-benefits/four" method="post">
+    <form action="/htc/account/questions/5-benefits-evidence/three" method="post">
 
       {% from 'checkboxes/macro.njk' import checkboxes %}
-
-      {{ checkboxes({
+      
+          {{ checkboxes({
             "idPrefix": "example",
             "name": "example",
             "fieldset": {
               "legend": {
-                "text": "What benefits does your product  / service create for the NHS / social care [for each population?]",
+                "text": "What type of  evidence do you have / are you collecting on these benefits [for each population]?",
                 "classes": "nhsuk-fieldset__legend--l"
               }
             },
             "items": [
               {
                 "value": 1,
-                "text": "Benefit 1"
+                "text": "Testimony from experts (e.g. patients, clinicians, academics)"
               },
               {
                 "value": 2,
-                "text": "Benefit 2"
+                "text": "Unpublished data"
               },
               {
                 "value": 3,
-                "text": "Benefit 3"
+                "text": "Poster/abstract presented at a conference"
               },
               {
                 "value": 4,
-                "text": "It doesn't benefit"
+                "text": "Randomised controlled trial published in a peer reviewed journal"
+              },
+              {
+                "value": 5,
+                "text": "Non-randomised comparative data in a peer reviewed journal"
+              },
+              {
+                "value": 6,
+                "text": "Data published but not in a peer reviewed journal"
               }
           ]
       }) }}
-      <a href="/htc/account/questions/4-clinical-benefits/five" class="nhsuk-button nhsuk-u-margin-bottom-8">
+  
+      <a href="/htc/account/questions/5-benefits-evidence/four" class="nhsuk-button nhsuk-u-margin-bottom-8">
         Continue
       </a>
     </form>
