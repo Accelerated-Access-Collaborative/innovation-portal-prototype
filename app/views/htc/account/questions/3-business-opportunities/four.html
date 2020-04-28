@@ -21,44 +21,40 @@ Product or service type - Profile a product or service
         Section 3 of 6
       </span>
     </h1>
-    <form action="/htc/account/questions/3-business-opportunities/three" method="post">
+    <form action="/htc/account/questions/3-business-opportunities/four" method="post">
 
       {% call fieldset({
         legend: {
-          "text": "Please describe the intellectual property status of your product / service? ",
+          "text": "Have you discussed your product / service with potential customers?",
           "classes": "nhsuk-fieldset__legend--l",
           "isPageHeading": true
         }
         }) %}
 
     {{ radios({
-          "idPrefix": "knowledge-about-ip",
-          "name": "knowledge-about-ip",
+          "idPrefix": "deployment-status",
+          "name": "deployment-status",
           "items": [
         {
-          "value": "patent_exists",
-          "text": "I have a patent / have applied"
+          "value": "yes-deployed",
+          "text": "Yes, and it is in deployment"
         },
         {
-          "value": "no_patent",
-          "text": "I don't have a patent, but believe I have freedom to operate"
+          "value": "yes-plan-to-deploy",
+          "text": "Yes, and they plan to deploy it"
         },
         {
-          "value": "status_unknown",
-          "text": "I don't know what the IP status is"
+          "value": "yes-not-deployed",
+          "text": "Yes, but they have not deployed it"
         },
         {
-          "value": "not_applicable",
-          "text": "My product / service does not have IP"
-        },
-        {
-          "value": "other",
-          "text": "Other"
+          "value": "no",
+          "text": "No"
         }
       ]
       }) }}
     {% endcall %}
-      <a href="/htc/account/questions/3-business-opportunities/four" class="nhsuk-button nhsuk-u-margin-bottom-8">
+      <a href="/htc/account/questions/3-business-opportunities/five" class="nhsuk-button nhsuk-u-margin-bottom-8">
         Continue
       </a>
     </form>
