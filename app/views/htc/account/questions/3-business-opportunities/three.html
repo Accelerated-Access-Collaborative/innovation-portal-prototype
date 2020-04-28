@@ -1,0 +1,61 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+Product or service type - Profile a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+    href: "/htc/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Detailed understanding of needs (clinical)
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+        Section 2 of 6
+      </span>
+    </h1>
+    <form action="/htc/account/questions/2-clinical-needs/one" method="post">
+
+     
+      {% from 'checkboxes/macro.njk' import checkboxes %}
+      
+          {{ checkboxes({
+            "idPrefix": "example",
+            "name": "example",
+            "fieldset": {
+              "legend": {
+                "text": "What condition best categorises Elderly?",
+                "classes": "nhsuk-fieldset__legend--l"
+              }
+            },
+            "items": [
+              {
+                "value": 1,
+                "text": "Option 1"
+              },
+              {
+                "value": 2,
+                "text": "Option 2"
+              },
+              {
+                "value": 3,
+                "text": "Option 3"
+              }
+          ]
+      }) }}
+  
+      <a href="/htc/account/questions/3-clinical-needs/three" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
+    </form>
+
+  </div>
+</div>
+{% endblock %}
