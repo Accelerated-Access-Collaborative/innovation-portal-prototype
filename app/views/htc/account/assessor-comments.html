@@ -8,7 +8,7 @@
 
 {% block beforeContent %}
   {{ breadcrumb({
-    href: "/htc/assessor",
+    href: "/htc/account/assessor",
     text: "Home"
   }) }}
 {% endblock %}
@@ -30,16 +30,16 @@
       {{ contentsList({
         items: [
           {
-            href: "/htc/innovation-profile",
+            href: "/htc/account/innovation-profile",
             text: "Innovation details"
           },
           {
-            href: "/htc/assessor-comments",
+            href: "/htc/account/assessor-comments",
             text: "Assessor comments",
             current: "true"
           },
           {
-            href: "/htc/manage-profile",
+            href: "/htc/account/manage-profile",
             text: "Manage profile"
           }
         ]
