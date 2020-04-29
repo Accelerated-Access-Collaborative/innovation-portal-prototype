@@ -15,38 +15,46 @@ Product or service type - Profile a product or service
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Evidence of the benefits
+    <h1>Safety and regulatory information
       <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
-        Section 5 of 6
+        Section 6 of 6
       </span>
     </h1>
-    <form action="/htc/account/questions/5-benefits-evidence/five" method="post">
+    <form action="/htc/account/questions/6-safety-regulatory-info/one" method="post">
 
       {% call fieldset({
           legend: {
-            "text": "Do you have experts we can talk to about your technology?",
+            "text": "Do you know of any regulations or standardsthat apply to your product or service?",
             "classes": "nhsuk-fieldset__legend--l",
             "isPageHeading": true
           }
           }) %}
 
       {{ radios({
-            "idPrefix": "talk-to-experts",
-            "name": "talk-to-experts",
+            "idPrefix": "info",
+            "name": "info",
             "items": [
           {
-            "value": "yes",
-            "text": "Yes"
+            "value": "1",
+            "text": "Yes, and I have met them all"
           },
           {
-            "value": "no",
-            "text": "No"
+            "value": "2",
+            "text": "Yes, and I am working on meeting them"
+          },
+          {
+            "value": "3",
+            "text": "I know some of them"
+          },
+          {
+            "value": "4",
+            "text": "I don't know any of them"
           }
         ]
         }) }}
       {% endcall %}
   
-      <a href="/htc/account/questions/6-safety-regulatory-info/one" class="nhsuk-button nhsuk-u-margin-bottom-8">
+      <a href="/htc/account/questions/6-safety-regulatory-info/two" class="nhsuk-button nhsuk-u-margin-bottom-8">
         Continue
       </a>
     </form>
