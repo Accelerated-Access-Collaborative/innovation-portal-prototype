@@ -1,0 +1,55 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+Product or service type - Profile a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+    href: "/htc/account/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Commercial Model
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+        Section 11 of 12
+      </span>
+    </h1>
+    <form action="/htc/account/questions/10-commercial-model/one" method="post">
+
+      {% from 'input/macro.njk' import input %}
+      <legend class="nhsuk-fieldset__legend--l">Which NHS / social care organisation and department would pay for the innovation? The more specific the better.</legend>
+
+      {{ input({
+        "label": {
+          "text": "Organisation:",
+          "classes": "nhsuk-label--m"
+        },
+        "id": "organisation-name",
+        "name": "organisation-name",
+        "classes": "nhsuk-u-width-three-quarters"
+      }) }}
+      {{ input({
+        "label": {
+          "text": "Department:",
+          "classes": "nhsuk-label--m"
+        },
+        "id": "department-name",
+        "name": "department-name",
+        "classes": "nhsuk-u-width-three-quarters"
+      }) }}
+
+
+      <a href="/htc/account/questions/10-commercial-model/four" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
+    </form>
+
+  </div>
+</div>
+{% endblock %}

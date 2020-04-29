@@ -1,0 +1,78 @@
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+Product or service type - Profile a product or service
+{% endblock %}
+
+
+{% block beforeContent %}
+{{ breadcrumb({
+    href: "/htc/account/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <h1>Commercial Model
+      <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+        Section 11 of 12
+      </span>
+    </h1>
+    <form action="/htc/account/questions/10-commercial-model/one" method="post">
+
+      {% from 'checkboxes/macro.njk' import checkboxes %}
+      
+          {{ checkboxes({
+            "idPrefix": "example",
+            "name": "example",
+            "fieldset": {
+              "legend": {
+                "text": "What is the revenue model for your product or service?",
+                "classes": "nhsuk-fieldset__legend--l"
+              },
+              "hint":{
+                "text" :"Select all that apply"
+              }
+            },
+            "items": [
+              {
+                "value": 1,
+                "text": "Lease"
+              },
+              {
+                "value": 2,
+                "text": "Subscription"
+              },
+              {
+                "value": 3,
+                "text": "Advertising"
+              },
+              {
+                "value": 4,
+                "text": "Fee for service"
+              },
+              {
+                "value": 5,
+                "text": "Direct product sales"
+              },
+              {
+                "value": 6,
+                "text": "Sales of consumables / accessories"
+              },
+              {
+                "value": 7,
+                "text": "Other"
+              }
+          ]
+      }) }}
+
+      <a href="/htc/account/questions/10-commercial-model/three" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
+    </form>
+
+  </div>
+</div>
+{% endblock %}
