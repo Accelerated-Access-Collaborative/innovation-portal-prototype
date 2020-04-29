@@ -15,11 +15,45 @@ Product or service type - Profile a product or service
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Thankyou
+    <h1>Deployment
       <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
-        All sections complete
+        Section 12 of 12
       </span>
     </h1>
+    <form action="/htc/account/questions/11-deployment/one" method="post">
+
+      {% call fieldset({
+          legend: {
+            "text": "Has your product or service been deployed in an NHS or care setting?",
+            "classes": "nhsuk-fieldset__legend--l",
+            "isPageHeading": true
+          }
+      }) %}
+
+      {{ radios({
+            "idPrefix": "cost",
+            "name": "cost",
+            "items": [
+          {
+            "value": "yes",
+            "text": "Yes"
+          },
+          {
+            "value": "no-planned",
+            "text": "No, but we have planned for this"
+          },
+          {
+            "value": "no",
+            "text": "No"
+          }
+        ]
+        }) }}
+      {% endcall %}
+
+      <a href="/htc/account/questions/11-deployment/finish" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Continue
+      </a>
+    </form>
 
   </div>
 </div>
