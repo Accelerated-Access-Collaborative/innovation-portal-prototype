@@ -12,28 +12,30 @@ Product or service type - Profile a product or service
   }) }}
 {% endblock %}
 
-
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
-    <h1>Understanding the business opportunity
+    <h1>Testing in context
       <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
-        Section 4 of 12
+        Section 8 of 12
       </span>
     </h1>
-    <form action="/htc/account/questions/3-business-opportunities/one" method="post">
+    <form action="/htc/account/questions/7-testing/one" method="post">
 
       {% call fieldset({
           legend: {
-            "text": "Have you undertaken structured market research?",
-            "classes": "nhsuk-fieldset__legend--m",
+            "text": "Have you tested your product or service with users?",
+            "classes": "nhsuk-fieldset__legend--l",
             "isPageHeading": true
+          },
+          hint: {
+            "text": "Testing can mean involving patients, carers, clinicians / administrator in design and delivery."
           }
           }) %}
 
       {{ radios({
-            "idPrefix": "structured-research",
-            "name": "structured-research",
+            "idPrefix": "testing-status",
+            "name": "testing-status",
             "items": [
           {
             "value": "yes",
@@ -47,7 +49,7 @@ Product or service type - Profile a product or service
         }) }}
       {% endcall %}
   
-      <a href="/htc/account/questions/3-business-opportunities/two" class="nhsuk-button nhsuk-u-margin-bottom-8">
+      <a href="/htc/account/questions/8-care-pathway/one" class="nhsuk-button nhsuk-u-margin-bottom-8">
         Continue
       </a>
     </form>
