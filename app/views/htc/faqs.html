@@ -1,0 +1,51 @@
+
+{% extends 'htc-layout.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>Frequently asked questions</h1>
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Which products and services are eligible? ",
+        "HTML": "
+        <p>Health Connect is intended for all kinds of innovation any stage of development - from idea, to prototype, to after UK market launch. </p>
+        <p>Products and services that that are likely to offer substantial measurable benefits to patients (or other service users) or the UK health and care system compared to the current UK standard of care will get the most benefit from using Health Connect. For example:</p>
+        <ul>
+          <li>products and services that offer measurable benefits to patients (or other health and care service users) compared to those already offered by current routine practice in the UK</li>
+          <li>products and services that provide measurable benefits to the UK health and care system compared to those already offered by current routine practice in the UK.</li>
+        </ul>
+        <p>Products and services that are likely to offer similar benefits to to patients or the UK health and care system when compared to current UK practice are unlikely to benefit the most from using Health Connect. For example:</p>
+        <ul>
+          <li>product line extensions, unless these are associated with additional measurable benefits</li>
+          <li>iterations of existing products and services, unless these are associated with additional measurable benefits</li>
+        </ul>
+        "
+      }) }} 
+
+      {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Who will have access to details about my product or service?",
+        "HTML": "
+        <p>A limited number of people working on behalf of an approved Accessor organisation can access Health Connect.</p>
+        <p>Doctors, nurses, and other healthcare professionals will not have access to Health Connect unless they also have a role in one of the approved Accessor Organisations and are registered to use the system as a Data Accessor on behalf of the Accessor Organisation. </p>"
+      }) }} 
+
+    </div>
+
+  </div>   
+{% endblock %}
