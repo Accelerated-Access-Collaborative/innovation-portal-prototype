@@ -49,15 +49,17 @@
 
           {{ radios({
             "idPrefix": "cost-savings",
-            "name": "rcost-savings",
+            "name": "cost-savings",
             "items": [
           {
-            "value": "yes",
-            "text": "Yes"
+            "value": "Yes",
+            "text": "Yes",
+            "checked": checked("cost-savings", "Yes")
           },
           {
-            "value": "no",
-            "text": "No"
+            "value": "No",
+            "text": "No",
+            "checked": checked("cost-savings", "No")
           }
         ]
         }) }}
