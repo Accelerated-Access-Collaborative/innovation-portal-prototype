@@ -1,0 +1,73 @@
+
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/account/innovator",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-width-container">
+
+      <h1>
+        Your profile
+      </h1>
+
+            {{ contentsList({
+        items: [
+          {
+            href: "/htc/account/innovator-profile",
+            text: "Your details",
+            current: "true"
+          },
+          {
+            href: "/htc/account/manage-innovator-profile",
+            text: "Manage profile"
+          }
+        ]
+      }) }}
+
+<h2>Your details</h2>
+
+      {{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Name"
+            },
+            value: {
+              text: "Innes Veshun"
+            }
+          },
+          {
+            key: {
+              text: "Role"
+            },
+            value: {
+              text: "CEO"
+            }
+          },
+          {
+            key: {
+              text: "Company"
+            },
+            value: {
+              text: "Chat Health"
+            }
+          }
+        ]
+      }) }}
+
+    </div>  
+
+  </div>
+{% endblock %}

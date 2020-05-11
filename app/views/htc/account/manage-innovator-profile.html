@@ -1,0 +1,95 @@
+
+{% extends 'htc-layout-innovator.html' %}
+
+{% block pageTitle %}
+  NHS innovation - NHS.UK prototype kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/htc/account/assessor",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Innovator profile
+      </h1>
+
+            {{ contentsList({
+        items: [
+          {
+            href: "/htc/account/innovator-profile",
+            text: "Your details"
+          },
+          {
+            href: "/htc/account/manage-innovator-profile",
+            text: "Manage profile",
+            current: "true"
+          }
+        ]
+      }) }}
+
+<h2>Manage profile</h2>
+
+<form action="">
+
+{% from 'fieldset/macro.njk' import fieldset %}
+{% from "input/macro.njk" import input %}
+
+{% call fieldset({
+
+}) %}
+
+  {{ input({
+    label: {
+      "text": 'Name'
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "address-line-1",
+    "name": "address-line-1",
+    "value": "Innes Vashun"
+  }) }}
+
+
+  {{ input({
+    label: {
+      "text": "Role"
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "address-town",
+    "name": "address-town",
+    "value": "CEO"
+  }) }}
+
+  {{ input({
+    label: {
+      "text": "Company"
+    },
+    "classes": "nhsuk-u-width-two-thirds",
+    "id": "address-county",
+    "name": "address-county",
+    "value": "Chat Health"
+  }) }}
+
+
+{% endcall %}
+
+{% from 'button/macro.njk' import button %}
+
+{{ button({
+  "text": "Update profile"
+}) }}
+
+</form>
+
+    </div>  
+
+  </div>
+{% endblock %}
